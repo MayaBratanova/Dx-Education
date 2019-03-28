@@ -1,0 +1,13 @@
+.input {    
+    border-radius: 0.2rem;    
+    width: 15rem;
+    margin-right: 0.6rem;
+    padding-left: 0.8rem;
+    outline: none;  
+
+    &-email{
+        border: 1px solid rgb(27, 27, 27);
+        background: rgb(15, 31, 54);
+        color: white;
+    }
+}

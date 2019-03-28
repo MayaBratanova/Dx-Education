@@ -1,0 +1,21 @@
+.text-with-icon-container {
+    width: 82%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+
+    img,
+    h5,
+    p {
+      padding-bottom: 1rem;
+    }
+
+    img {
+      width: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 2;
+    }
+  }

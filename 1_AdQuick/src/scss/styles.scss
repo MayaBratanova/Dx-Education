@@ -1,56 +1,23 @@
-@import 'reset';
-@import 'typography';
-@import 'button';
+@import './elements/button.scss';
+@import './elements/input.scss';
+@import './elements/navigation.scss';
+@import './elements/site-logo.scss';
 
-@import 'header';
-@import 'main';
-@import 'image';
-@import 'footer';
+@import './components/wrapper.scss';
+@import './components/site-section.scss';
+@import './components/site-email-form.scss';
+@import './components/site-logo-and-navigation.scss';
+@import './components/text-container.scss';
+@import './components/text-with-icon-container.scss';
+@import './components/gallery.scss';
 
-body{
-   
-}
-
-.wrapper{
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.site-section{
-    padding: 5rem 0;
-    text-align: center; 
-}
-
-.text{
-    width: 48%;
-    display: flex;
-    align-items: flex-end;
-}
-
-.gallery-image{
-    width: 45%;
-    display: block;    
-    overflow: hidden;
-    position: relative;
-  }
-
-  .gallery-image:before{
-    display: block;
-    content: '';
-    padding-top: 100%;
-  }
-
-  .gallery-image img{
-    display: block;
-    width: auto;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .gallery-image .portrait{
-    width: 100%;
-    height: auto;
-  }
+@import './modules/reset.scss';
+@import './modules/typography.scss';
+@import './modules/header.scss';
+@import './modules/footer.scss';
+@import './modules/banner.scss';
+@import './modules/logos-line.scss';
+@import './modules/site-location-section.scss';
+@import './modules/site-gallery-section.scss';
+@import './modules/site-info-section.scss';
+@import './modules/start-free-section.scss';
