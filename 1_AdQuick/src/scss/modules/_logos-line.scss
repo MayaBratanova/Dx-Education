@@ -1,17 +1,16 @@
-.logos-line { 
-  
+.logos-line {
   ul {
-    width: 80%;
-    padding: 2rem 0;
+    max-width: 80%;
+    padding-top: 1rem;
     margin: 0 auto;
     justify-content: space-between;
 
     li {
-      width: 15%;
-      overflow: hidden;      
+      flex: 0 0 15%;
+      padding-bottom: 1rem;
       display: flex;
-      justify-content: center;     
-    }   
+      justify-content: center;
+    }
 
     li:not(:last-child) {
       padding-right: 0;
@@ -19,9 +18,18 @@
 
     img {
       width: auto;
-      max-height: 3.5rem;
+      max-height: 3.2rem;
     }
+  }
+}
 
-    
+@media screen and (max-width: 860px) {
+  .logos-line {
+    ul {
+      li {
+        flex: 0 0 30%;
+        
+      }
+    }
   }
 }

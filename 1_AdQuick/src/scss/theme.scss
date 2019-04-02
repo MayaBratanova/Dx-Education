@@ -3,7 +3,7 @@
 @import 'modules/typography';
 @import 'modules/header';
 @import 'modules/footer';
-@import 'modules/banner';
+@import 'modules/section-banner';
 @import 'modules/logos-line';
 @import 'modules/site-location-section';
 @import 'modules/site-gallery-section';
@@ -13,11 +13,11 @@
 @import 'elements/button';
 @import 'elements/input';
 @import 'elements/site-logo';
+@import 'elements/unordered-list';
 
 @import 'components/wrapper';
 @import 'components/site-section';
 @import 'components/site-email-form';
-@import 'components/site-logo-and-navigation';
 @import 'components/text-container';
 @import 'components/text-with-icon-container';
 @import 'components/gallery';

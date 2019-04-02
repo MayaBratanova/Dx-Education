@@ -1,0 +1,25 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+  
+    li:nth-child(1) > a {
+      color: #202c2e;
+    }
+  
+    li:not(:last-child) {
+      padding-right: 2.7rem;
+    }
+  
+    li a {
+      display: block;
+      font-size: 14px;
+      color: #808585;
+      padding: 0.2rem;
+      transition: 0.3s;
+  
+      &:hover {
+        color: orange;
+        transform: scale(1.2);
+      }
+    }
+  }

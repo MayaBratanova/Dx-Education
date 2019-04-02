@@ -1,26 +1,111 @@
-ul {
-    display: flex;  
-    flex-wrap: wrap; 
-            
+.site-navigation {
+  margin-right: auto;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  
     li:nth-child(1) > a {
-        color: #202C2E;
+      color: #202c2e;
     }
-
+  
     li:not(:last-child) {
-        padding-right: 2.7rem;
+      padding-right: 2.7rem;
     }
-
+  
     li a {
-        display: block;
-        font-size: 14px;
-        color: #808585; 
-        padding: 0.2rem;   
-        transition: 0.3s;            
-        
-        &:hover {
-            color: orange;
-            transform: scale(1.2);
-        }
+      display: block;
+      font-size: 14px;
+      color: #808585;
+      padding: 0.2rem;
+      transition: 0.3s;
+  
+      &:hover {
+        color: orange;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+
+
+#main-nav-toggle,
+#toggle {
+  display: none;
+}
+
+#toggle {
+  position: relative;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0 1rem;
+
+  &:hover {
+    color: orange;
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .site-header .wrapper {
+
+    .site-navigation {
+      margin-right: 0;
+      display: none;
+      text-align: center;
+      padding-bottom: 0.5rem;
+       ul li{
+           padding: 0;
+       }
     }
 
-}   
+    .site-logo {
+      margin-right: 0;
+      padding-bottom: 0.5rem;
+    }
+
+    .btn {
+      display: none;
+    }
+
+    #toggle {
+      display: flex;
+    //   margin: 0 auto;
+      font-weight: bold;
+    }
+
+    #toggle:after {
+      content: "";
+      background: url("../../images/bars-solid.svg") no-repeat;
+      display: block;
+      background-size: 22px 22px;
+      height: 22px;
+      width: 22px;
+      margin-left: 0.5rem;
+    }
+  }
+  #main-nav-toggle:checked + .site-header {
+    .wrapper {
+      flex-direction: column;
+
+      .btn {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+    }
+
+    .site-navigation {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 30%;
+    
+    }
+  }
+
+}
+

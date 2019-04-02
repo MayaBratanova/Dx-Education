@@ -1,5 +1,5 @@
 .site-info-section {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;    
 
     div.wrapper {
@@ -13,7 +13,7 @@
     }
   
     .gallery-image img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
   
@@ -22,7 +22,25 @@
     }
   
     div:nth-child(2) {
-      width: 50%;
+      max-width: 50%;
       text-align: left;
     }
+  }
+
+  @media screen and (max-width: 860px) {
+    .site-info-section .wrapper {
+        flex-direction: column;
+
+        .text-container{
+          width: 100%;
+        }
+        
+        & div:nth-child(2) {
+          max-width: 100%;
+          
+      }
+    }
+    
+
+    
   }

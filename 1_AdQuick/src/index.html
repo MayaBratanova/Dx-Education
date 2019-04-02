@@ -12,35 +12,39 @@
 </head>
 
 <body>
+    <input type="checkbox" name="main-nav-toggle" id="main-nav-toggle" checked />
     <header class="site-header">
         <div class="wrapper">
-            <div class="site-logo-and-navigation">
-                <img class="site-logo" src="images/adQuick-logo.png" alt="">
-                <nav class="site-navigation">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Coverage</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <button class="btn btn-primary">Get Started</button>
+            <img class="site-logo" src="images/adQuick-logo.png" alt="">
+            <label for="main-nav-toggle" id="toggle">Menu</label>
+            <nav class="site-navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Coverage</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn btn-primary">Get Started</a>
         </div>
     </header>
     <main>
-        <section class="banner">
-            <div class="wrapper">
-                <h1>Outdoor <span>Advertising Made</span> <span>Easy.</span></h1>                
-            </div>
+        <section class="section section-banner">
+            <section class="title">
+                <div class="wrapper">
+                    <h1>Outdoor <span>Advertising Made</span> <span>Easy.</span></h1>
+                    <div>
+            </section>
+
+            <section class="site-email-form absolute">
+                <div class="wrapper">
+                    <input class="input input-email" type="email" placeholder="email address">
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+            </section>
         </section>
-        <section class="site-email-form absolute">
-            <div class="wrapper">
-                <input class="input input-email" type="email" placeholder="email address">
-                <button class="btn btn-primary">Get Started</button>
-            </div>
-        </section>
+
         <section class="logos-line">
             <div class="wrapper">
                 <ul>
@@ -65,7 +69,7 @@
                 <h2>What makes us Unique</h2>
                 <p>Cost Cutting Ideas For Your Marketing</p>
                 <ul class="gallery">
-                    <li class="col-8">
+                    <li>
                         <div class="gallery-image">
                             <img class="portrait" src="images/billboard-woman.jpg" alt="pic">
                         </div>
@@ -79,12 +83,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-4">
+                    <li>
                         <div class="gallery-image">
                             <img src="images/billboard-white.jpg" alt="pic">
                         </div>
                     </li>
-                    <li class="col-12">
+                    <li>
                         <div class="gallery-image">
                             <img src="images/billboard-culture.jpg" alt="pic">
                         </div>
@@ -121,18 +125,18 @@
 
         <section class="start-free-section site-section">
             <div class="wrapper">
-            <h2>Billboards you can measure</h2>
-            <p>Plan, purchase, and measure outdoor advertising, all in one place. Zero purchase fee on your
-                first
-                campaign.</p>
-            <section class="site-email-form">
-                <div class="wrapper">
-                    <input class="input input-email" type="email" placeholder="email address">
-                    <button class="btn btn-primary">Get Started for Free</button>
-                </div>
+                <h2>Billboards you can measure</h2>
+                <p>Plan, purchase, and measure outdoor advertising, all in one place. Zero purchase fee on your
+                    first
+                    campaign.</p>
+                <section class="site-email-form">
+                    <div class="wrapper">
+                        <input class="input input-email" type="email" placeholder="email address">
+                        <button class="btn btn-primary">Get Started for Free</button>
+                    </div>
 
-            </section>
-        </div>
+                </section>
+            </div>
 
         </section>
 
