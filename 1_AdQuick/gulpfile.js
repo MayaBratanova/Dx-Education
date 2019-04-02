@@ -7,10 +7,15 @@ var gulp = require("gulp"),
     browserSync = require("browser-sync").create();
 
 var paths = {
-    styles: {       
-        src: "src/scss/*.scss",       
-        dest: "src/css"
-    }    
+
+    styles:{
+        src: 'src/scss/**/*.scss',
+        dest: 'src/css'
+    }
+    // styles: {       
+    //     src: "src/scss/*.scss",       
+    //     dest: "src/css"
+    // }    
 };
 
 function style() {
@@ -32,7 +37,7 @@ function reload() {
 function watch() {
     browserSync.init({       
         server: {
-            baseDir: "./src"
+            baseDir: "src"
         }       
     });
     gulp.watch(paths.styles.src, style);    
@@ -42,4 +47,3 @@ exports.watch = watch
 exports.style = style;
 
 var build = gulp.parallel(style, watch);
- 

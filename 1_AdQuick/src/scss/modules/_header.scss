@@ -1,0 +1,15 @@
+.site-header {
+    padding: 0.7rem 8rem 0.7rem 0;
+    position: relative;   
+    box-shadow: 0 8px 6px -6px rgb(122, 121, 121);
+    z-index: 2;
+    
+    div.wrapper {
+        display: flex;   
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+

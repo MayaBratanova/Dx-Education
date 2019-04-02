@@ -1,17 +1,17 @@
-.gallery-image{
+.gallery-image {
     width: 45%;
     display: block;    
     overflow: hidden;
     position: relative;
   }
 
-  .gallery-image:before{
+  .gallery-image:before {
     display: block;
     content: '';
     padding-top: 100%;
   }
 
-  .gallery-image img{
+  .gallery-image img {
     display: block;
     width: auto;
     height: 100%;
@@ -21,7 +21,7 @@
     transform: translate(-50%, -50%);
   }
 
-  .gallery-image .portrait{
+  .gallery-image .portrait {
     width: 100%;
     height: auto;
   }

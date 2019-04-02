@@ -1,8 +1,25 @@
-/*
-modules - reset
-elements
-components
-layout
-pages 
 
-*/
+@import 'modules/reset';
+@import 'modules/typography';
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/banner';
+@import 'modules/logos-line';
+@import 'modules/site-location-section';
+@import 'modules/site-gallery-section';
+@import 'modules/site-info-section';
+@import 'modules/start-free-section';
+
+@import 'elements/button';
+@import 'elements/input';
+@import 'elements/site-logo';
+
+@import 'components/wrapper';
+@import 'components/site-section';
+@import 'components/site-email-form';
+@import 'components/site-logo-and-navigation';
+@import 'components/text-container';
+@import 'components/text-with-icon-container';
+@import 'components/gallery';
+@import 'components/navigation';
+
