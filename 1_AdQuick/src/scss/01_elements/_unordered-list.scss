@@ -4,12 +4,8 @@ ul {
   
     li:nth-child(1) > a {
       color: #202c2e;
-    }
-  
-    li:not(:last-child) {
-      padding-right: 2.7rem;
-    }
-  
+    }  
+    
     li a {
       display: block;
       font-size: 14px;

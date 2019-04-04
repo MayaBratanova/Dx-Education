@@ -1,25 +1,28 @@
 
-@import 'modules/reset';
-@import 'modules/typography';
-@import 'modules/header';
-@import 'modules/footer';
-@import 'modules/section-banner';
-@import 'modules/logos-line';
-@import 'modules/site-location-section';
-@import 'modules/site-gallery-section';
-@import 'modules/site-info-section';
-@import 'modules/start-free-section';
+@import '00_modules/reset';
+@import '00_modules/typography';
 
-@import 'elements/button';
-@import 'elements/input';
-@import 'elements/site-logo';
-@import 'elements/unordered-list';
+@import '01_elements/ar-media';
+@import '01_elements/button';
+@import '01_elements/input';
+@import '01_elements/unordered-list';
 
-@import 'components/wrapper';
-@import 'components/site-section';
-@import 'components/site-email-form';
-@import 'components/text-container';
-@import 'components/text-with-icon-container';
-@import 'components/gallery';
-@import 'components/navigation';
+@import '02_components/navigation';
+@import '02_components/site-email-form';
+@import '02_components/text-container';
+@import '02_components/text-with-icon-container';
+
+@import '03_layout/layout';
+@import '03_layout/site-header';
+@import '03_layout/site-footer';
+@import '03_layout/site-logo';
+
+@import '04_sections/banner';
+@import '04_sections/gallery';
+@import '04_sections/info';
+@import '04_sections/location';
+@import '04_sections/logos-line';
+@import '04_sections/section';
+@import '04_sections/start-free';
+
 
