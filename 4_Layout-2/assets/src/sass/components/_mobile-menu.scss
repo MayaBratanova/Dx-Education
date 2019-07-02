@@ -1,0 +1,33 @@
+.main-nav-toggle-entry,
+.main-nav-toggle-header {
+  display: none;
+}
+
+@media (max-width:1280px) {
+    .main-nav-toggle-entry:checked + .entry-header .site-menu {
+        display: block;
+        flex: 0 0 50%;       
+    }   
+
+    .main-nav-toggle-header:checked + .site-header .site-menu {
+        display: block;             
+    }
+
+    .main-nav-toggle-entry:checked + .entry-header .toggle-entry:after,
+    .main-nav-toggle-header:checked + .site-header .toggle-header:after {
+        content: '\f00d';
+    }
+
+    .entry-header .site-menu ul,
+    .site-header .site-menu ul {
+        flex-direction: column;
+
+        li:not(:last-child) > a {
+            border-right: none;
+        }          
+
+        a {
+            margin: 0.7rem 0;
+        }
+    }     
+}
