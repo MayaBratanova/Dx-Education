@@ -17,96 +17,109 @@
                 <p class="site-subtitle">This is the subtitle of the blog</p>
             </div>        
 
-            <p class="menu-hamburger">
-                <label for="main-nav-toggle-header" class="icon hamburger toggle-header" id="toggle-header"></label>                        
-            </p>
-            <nav class="site-menu">
-                <ul>
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">Sample page</a></li>
-                    <li><a href="#">Download theme</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#" class="icon user"></a></li>
-                </ul>
-            </nav>
-            <div class="site-menu social-icons">
-                <ul>
-                    <li><a href="#" class="icon social google"></a></li>
-                    <li><a href="#" class="icon social twitter"></a></li>
-                    <li><a href="#" class="icon social medium"></a></li>
-                    <li><a href="#" class="icon social facebook"></a></li>
-                </ul>
+            <div class="site-menu-items-container">
+                <p class="menu-hamburger">
+                    <label for="main-nav-toggle-header" class="icon icon-regular icon-hamburger toggle-header" id="toggle-header"></label>                        
+                </p>
+                <nav class="site-menu">
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">Sample page</a></li>
+                        <li><a href="#">Download theme</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#" class="icon icon-regular icon-user"></a></li>
+                    </ul>
+                </nav>
+                <div class="site-menu social-icons">
+                    <ul>
+                        <li><a href="#" class="icon icon-social icon-google"></a></li>
+                        <li><a href="#" class="icon icon-social icon-twitter"></a></li>
+                        <li><a href="#" class="icon icon-social icon-medium"></a></li>
+                        <li><a href="#" class="icon icon-social icon-facebook"></a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main class="site-content">  
-            <div class="entry">
-                <input type="checkbox" name="main-nav-toggle" id="main-nav-toggle-entry" class="main-nav-toggle-entry" unchecked>
-                <section class="entry-header">
-                    <p class="menu-hamburger">
-                        <label for="main-nav-toggle-entry" class="toggle-entry icon hamburger" id="toggle"></label>                        
-                    </p>
-                    <nav class="site-menu">
-                        <ul>                        
-                            <li><a href="">Sample category</a></li>
-                            <li><a href="">Design Works</a></li>
-                            <li><a href="">Programming Tips</a></li>
-                            <li><a href="">Industry News</a></li>
-                        </ul>
-                    </nav>
-                    <div class="search icon">
-                        <input type="text" placeholder="Type to search">
-                    </div>
+            <input type="checkbox" name="main-nav-toggle" id="main-nav-toggle-entry" class="main-nav-toggle-entry" unchecked>
+            <section class="page-header">
+                <p class="menu-hamburger">
+                    <label for="main-nav-toggle-entry" class="toggle-entry icon icon-regular icon-hamburger" id="toggle"></label>                        
+                </p>
+                <nav class="site-menu">
+                    <ul>                        
+                        <li class="menu-item"><a href="">Sample category</a></li>
+                        <li class="menu-item"><a href="">Design Works</a></li>
+                        <li class="menu-item"><a href="">Programming Tips</a></li>
+                        <li class="menu-item"><a href="">Industry News</a></li>
+                    </ul>
+                </nav>
+                <div class="icon icon-search icon-regular">
+                    <input type="text" placeholder="Type to search">
+                </div>
+            </section>
+            <div class="entry">               
+                <section class="entry-banner row">
+                    <aside class="column-3"></aside>
+                    <h1 class="banner-heading column-6">27 Ways to get started in the web design industry</h1>
+                    <aside class="column-3"></aside>
                 </section>
-                <section class="entry-banner">
-                    <h2 class="banner-heading">27 Ways to get started in the web design industry</h2>
-                </section>
-                <section class="entry-main">
-                    <aside class="entry-aside left">
-                        <div class="profile">
-                            <img class="profile-image" src="./assets/src/images/profile-img.png" alt="Profile image">
-                            <p class="profile-name">Jenny Waters</p>
-                            <p class="profile-description">The OS scheduler schedules different processes (threads actually. every process has atleast a main thread) for different timeslices on the processor. Therefore, at one moment in time, you can only have one thread(process)</p>
-                            <ul class="profile-information">
-                                <li>14th June 2017</li>
-                                <li>4 minutes long</li>
-                                <li>bit.ly/srtlnk</li>
-                            </ul>
-                            <a href="#" class="profile-comments"><span class="comments-icon icon comment"></span><span class="count">56 comments</span></a>
-                            <!-- <i class="fas fa-comments"></i> -->
-                        </div>
-                    </aside>
-                    <main class="entry-content">
-                        <div class="entry-text-container">
-                            <p class="beginning">It is possible to implement some sort of a generic mechanism in Go by using the empty interface (interface {}) feature of the language. However, it’s not ideal.</p>
-                            <p>Since I’m referring to “concurrency” multiple times in this article, I would advise you to check out Rob Pike’s talk on ‘Concurrency is not parallelism”. In programming, concurrency is the composition of independently executing processes, while parallelism is the simultaneous execution of (possibly related) computations.</p>
-                            <p>Unless you have a processor with multiple cores or have multiple processors, you can’t really have parallelism since a CPU core can only execute one thing at a time. On a single core machine, it’s just concurrency that’s doing it’s job behind the scenes.</p>
-                            <h2 class="entry-content-header icon">First h2 headline</h2>
-                            <p>Emotional design is the secret sauce of many successful products. It can make all the difference between a good product and one that users talk about to everyone.</p>
-                            <p>Think of a digital product you love and have raved about to your friends. Often, in this crowded market, these products are not one of a kind —  there are competitors who offer almost identical functionality. So why do you prefer one over the other? It’s more than what the product does, it’s how the product makes you feel.</p>
-                            <p>Usually, when we think about the role emotions play in the marketplace, we think of advertising. Psychological and neuroscientific research has revealed that emotions are so powerful they influence our perception, decision making, and even memory  —  the more emotional an experience the better we remember it.</p>
-                            <p>However, these days it takes on average seven impressions for people to act, and no amount of advertising will ensure customer retention. Instead of waiting till that later stage to consider emotions, product designers can inspire specific feelings in their users by designing with emotions in mind from the get go.</p>
-                            <div class="back-to-top ">
-                                <a href="#top" class="icon">Back to top</a>
+                <section class="entry-main row">
+                    <!-- <div> -->
+                        <!-- <div class="columns small-12 large-3"> -->
+                            <aside class="entry-aside left column-3">
+                                <div class="profile">
+                                    <img class="profile-image" src="./assets/src/images/profile-img.png" alt="Profile image">
+                                    <h4 class="profile-name">Jenny Waters</h4>
+                                    <p class="profile-description">The OS scheduler schedules different processes (threads actually. every process has atleast a main thread) for different timeslices on the processor. Therefore, at one moment in time, you can only have one thread(process)</p>
+                                    <ul class="profile-information">
+                                        <li>14th June 2017</li>
+                                        <li>4 minutes long</li>
+                                        <li><a href="#">bit.ly/srtlnk</a></li>
+                                    </ul>
+                                    <a href="#" class="profile-comments"><span class="comments-icon icon icon-comment icon-regular"></span><span class="count">56 comments</span></a>                            
+                                </div>
+                            </aside>
+                        <!-- </div> -->
+                        <!-- <div class="columns small-12 large-6"> -->
+                            <div class="entry-content column-6">
+                                <div class="entry-text-container">
+                                    <p class="beginning">It is possible to implement some sort of a generic mechanism in Go by using the empty interface (interface {}) feature of the language. However, it’s not ideal.</p>
+                                    <p>Since I’m referring to “concurrency” multiple times in this article, I would advise you to check out Rob Pike’s talk on ‘Concurrency is not parallelism”. In programming, concurrency is the composition of independently executing processes, while parallelism is the simultaneous execution of (possibly related) computations.</p>
+                                    <p>Unless you have a processor with multiple cores or have multiple processors, you can’t really have parallelism since a CPU core can only execute one thing at a time. On a single core machine, it’s just concurrency that’s doing it’s job behind the scenes.</p>
+                                    <h2 class="icon  icon-regular icon-hashtag" id="first-h2">First h2 headline</h2>
+                                    <p>Emotional design is the secret sauce of many successful products. It can make all the difference between a good product and one that users talk about to everyone.</p>
+                                    <p>Think of a digital product you love and have raved about to your friends. Often, in this crowded market, these products are not one of a kind —  there are competitors who offer almost identical functionality. So why do you prefer one over the other? It’s more than what the product does, it’s how the product makes you feel.</p>
+                                    <p>Usually, when we think about the role emotions play in the marketplace, we think of advertising. Psychological and neuroscientific research has revealed that emotions are so powerful they influence our perception, decision making, and even memory  —  the more emotional an experience the better we remember it.</p>
+                                    <p>However, these days it takes on average seven impressions for people to act, and no amount of advertising will ensure customer retention. Instead of waiting till that later stage to consider emotions, product designers can inspire specific feelings in their users by designing with emotions in mind from the get go.</p>
+                                    <div class="back-to-top ">
+                                        <a href="#top" class="icon icon-regular icon-arrow">Back to top</a>
+                                    </div>
+                                </div>
+                                <div class="entry-footer">
+                                    <p>56 reader comments</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="entry-footer">56 reader comments</div>
-                    </main>
-                    <aside class="entry-aside right">
-                        <div class="widget-contentMap">
-                            <h5 class="contentMap-heading">CONTENT MAP</h5>
-                            <ol>
-                                <li><a href="#">First h2 headline</a></li>
-                                <li><a href="#">Something other here</a></li>
-                                <li><a href="#">Longer third heading 3 title inside the content</a></li>
-                                <li><a href="#">This one has smaller</a>
+                        <!-- </div> -->
+                        <!-- <div class="columns small-12 large-3"> -->
+                            <aside class="entry-aside right column-3">
+                                <div class="widget-contentmap">
+                                    <h5 class="contentmap-heading">CONTENT MAP</h5>
                                     <ol>
-                                        <li><a href="#">This one has smaller</a></li>
-                                        <li><a href="#">One more example for a headline with text</a></li>
+                                        <li><a href="#first-h2">First h2 headline</a></li>
+                                        <li><a href="#">Something other here</a></li>
+                                        <li><a href="#">Longer third heading 3 title inside the content</a></li>
+                                        <li><a href="#">This one has smaller</a>
+                                            <ol>
+                                                <li><a href="#">This one has smaller</a></li>
+                                                <li><a href="#">One more example for a headline with text</a></li>
+                                            </ol>
+                                        </li>
                                     </ol>
-                                </li>
-                            </ol>
-                        </div>
-                    </aside>
+                                </div>
+                            </aside>
+                        <!-- </div> -->
+                    <!-- </div> -->
                 </section>
             </div>        
         </main>

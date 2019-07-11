@@ -1,51 +1,89 @@
-.icon:after {
-  font-family: "Font Awesome 5 Free";
-  display: inline-block;
-  font-weight: 900;  
+.icon {
+  @extend %fa-icon;
+  
+  &-social {   
+    @extend .fab;
+  }
+  
+  &-regular {
+    @extend .far;    
+  }
+  
+  &-regular:after {
+    font-weight: 400;
+  }
+  
+  &-facebook:after {
+    content: fa-content($fa-var-facebook);
+  }
+  
+  &-twitter:after {
+    content: fa-content($fa-var-twitter);
+  }
+  
+  &-medium:after {
+    content: fa-content($fa-var-medium);
+  }
+  
+  &-google:after {
+    content: fa-content($fa-var-google);
+  }
+  
+  &-user:after {
+    content: fa-content($fa-var-user);
+  }
+  
+  &-hamburger:after {
+    content: fa-content($fa-var-bars);
+    font-size: 20px;
+  }
+  
+  &-search:after {
+    content: fa-content($fa-var-search);
+    
+  }
+  
+  &-hashtag:after {
+    content: fa-content($fa-var-hashtag);    
+  }
+  
+  &-comment:after {
+    content: fa-content($fa-var-comments);
+  }
+  
+  &-arrow:after {
+    content: fa-content($fa-var-arrow-square-up);
+  }
 }
 
-.social:after {
-  font-family: "Font Awesome 5 Brands"       
+.row {
+  @include flex-grid-row(null, expand, 3, true, true, map);
 }
 
-.user:after {  
-    content: '\f2bd';  
+.column-3 {
+  @include flex-grid-column(3);
 }
 
-.hamburger:after {
-  content: '\f0c9';
-  font-size: 20px;
+.column-6 {
+  @include flex-grid-column(6);
 }
 
-.twitter:after {
-    content: '\f099';
-}
-
-.google:after {
-    content: '\f1a0';
-}
-
-.medium:after {
-    content: '\f23a';     
-}
-
-.facebook:after {
-  content: "\f39e";  
-}
-
-.comment:after {
-  content: "\f086";  
-}
-
-.search {
-  position: relative;
-  width: 360px;
-
-  @media (max-width: 1280px) {    
-    flex: 0 0 33%;
-    margin-left: auto;
+@media (max-width: 1280px) {
+  .column-3 {
+    @include flex-grid-column(12);
   }
 
+  .column-6 {
+    @include flex-grid-column(8);
+    margin: 0 auto;
+  }
+}
+
+
+.icon-search {
+  position: relative;   
+  margin-right: 1.5em;
+  
   input {    
     font-weight: 400;
     font-style: italic;    
@@ -53,48 +91,41 @@
     border: none;
     border-left: 1px solid #eee;
     display: inline-block;
-
-    @media (max-width: 1280px) {
-      padding: 0.8rem;      
+    max-width: 100%;
+    padding-right: 3em;  
+  } 
+  
+  @media (max-width: 1280px) {    
+    margin-left: auto;
+    
+    input {
+      padding: 0.8em;
     }
   }
-
-  &:after {
-    content: '\f002';
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: 18px;
-    font-weight: 600;
-
-    @media (max-width: 1280px) {
-      top: 5px;      
-    }
-  }  
 }
 
 .back-to-top { 
   position: absolute;
   bottom: -31px;
-  right: -3px;  
+  right: 0;  
   display: inline-block;
-
+  
   a {
     color: $color-primary;
     background: $color-entry;    
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    font-size: 14px;
+    font-size: 0.875em;
     padding: 0.65em 1.20em 0.65em 2.9em;
     position: relative;
-
-    &:after {
-      content: '\f35b';
+    font-weight: 700;
+    
+    &:after {     
       color: $color-primary;   
       position: absolute;
       top: 6px;
       left: 16px;
-      font-size: 16px;
+      font-size: 1.3em;
     }
   }  
 }

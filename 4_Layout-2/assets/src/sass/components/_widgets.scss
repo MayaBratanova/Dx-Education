@@ -1,32 +1,36 @@
-.widget-contentMap {
-
-    ol {
-        counter-reset: section;
-        list-style-type: none;        
-    }
-    
-    li::before {
-        counter-increment: section;
-        content: counters(section, ".") ". ";
-    }
-
-    li {
-        border-bottom: 1px solid #DEDEDE;
-        padding: 0.82em 0;
-        font-weight: 700;       
-    }
-
-    li > ol li {
-        font-weight: 400;
-        padding-left: 1.5rem;
-    }
-
-    .contentMap-heading {
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #A7A7A7;
-        margin: 0;
-        padding-bottom: 1.3em;
-        border-bottom: 1px solid #DEDEDE;
-    }
+.widget-contentmap {
+  border-bottom: 1px solid #DEDEDE;
+  
+  ol {
+    counter-reset: section;
+    list-style-type: none;        
+  }
+  
+  ol > li > ol > li:last-child {
+    padding-bottom: 0;
+  }   
+  
+  li::before {
+    counter-increment: section;
+    content: counters(section, ".") ". ";
+  }
+  
+  li {
+    border-top: 1px solid #DEDEDE;
+    padding: 0.82em 0;
+    font-weight: 700;       
+  }
+  
+  li > ol li {
+    font-weight: 400;
+    padding-left: 1.5em;
+  }
+  
+  .contentmap-heading {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    color: #A7A7A7;
+    margin: 0;
+    padding-bottom: 1.3em;        
+  }
 }
