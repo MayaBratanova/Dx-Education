@@ -1,0 +1,6 @@
+=== Clarity ===
+
+Modified DevriX Clarity theme by DevriX
+
+= 26/9/2018 - Version 1.0.0 =
+ * Initial version for the Clarity theme
