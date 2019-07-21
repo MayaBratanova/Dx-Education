@@ -1,0 +1,75 @@
+.site-logo {
+    img {
+        width: 70px;
+        height: auto;
+    }
+}
+
+.icon {
+    @extend %fa-icon;
+
+    &-regular {
+        @extend .far;        
+    }
+
+    &-search:before {       
+        content: fa-content($fa-var-search);       
+    }
+
+    &-chevron-right:after {
+        content: fa-content($fa-var-chevron-right);
+    }
+
+    &-chevron-circle-right:before {
+        content: fa-content($fa-var-chevron-circle-right);
+    }
+}
+
+.svg {
+    &-arrow {
+        width: 85px;
+        background: #fff;
+        border-radius: 50%;    
+        padding: 0.5em;
+        position: absolute;
+        left: 14px;        
+    }
+}
+
+.column-width {
+
+    &-160 {
+        flex: 0 0 160px;
+        margin: 0 0.8em;
+    }
+
+    &-728 {
+        flex: 0 0 728px;
+        // margin: 0 0.5em;
+    }
+
+    &-300 {
+        flex: 0 0 300px;
+        margin: 0 0.8em;
+    }
+}
+
+@media (max-width: 1250px) {
+    .entry {
+               
+    }
+
+    .page-wrapper {
+        max-width: 1200px;
+        margin: 0 auto; 
+    }
+
+    .column-width-160 {
+        display: none;
+    }
+
+    .page-wrapper {
+        // max-width: 900px;
+    }
+    
+}

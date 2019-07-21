@@ -1,0 +1,82 @@
+.site-wrapper {
+    // max-width: 1600px;
+    // width: 100%;
+    // margin: 0 auto;
+}
+
+.page-wrapper {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: $font-sans;
+}
+
+.site-banner {   
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.75);
+    background: #000;
+    overflow: hidden;
+
+    .page-wrapper {
+        display: flex;
+        background: #000;        
+    }
+
+    .column-width {
+
+        &-160 {
+            background: #000; 
+        }
+
+        &-728 {            
+           margin: 0;
+        }
+    
+        &-300 {
+            margin: 0;
+            background: url('../../src/images/thomas-william-FD03zUvwznY-unsplash.jpg') no-repeat center center;
+            object-fit: cover; 
+            flex: 0 0 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        &-300:after {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, black, #fcfcfc63);  
+        }
+    }   
+
+    // .image-container {       
+    //     position: relative;
+    //     height: 250px;
+    //     overflow: hidden;
+    //     text-align: right;
+    //     background: black;
+    // }
+
+    // .image {
+    //     height: 100%;
+    //     width: 600px;
+    //     object-fit: cover;
+    //     display: inline-block;     
+    // }
+
+    // .image-container:after {
+    //     display: block;
+    //     content: '';
+    //     top: 0;
+    //     width: 600px;
+    //     height: 100%;       
+    //     right: 0;        
+    //     position: absolute;
+    //     background: #000;
+    //     background: linear-gradient(90deg, black, #00000063);          
+    // }
+}
+
