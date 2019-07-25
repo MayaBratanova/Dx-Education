@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+	font: 12px/1.5 Georgia, sans-serif;
+}
+
+
+
+
+html {
+  font-size: $global-font-size;
+  @media screen and (min-width: 500px) { html { font-size: 14px } }
+  @media screen and (min-width: 600px) { html { font-size: 16px } }
+  @media screen and (min-width: 800px) { html { font-size: 18px } }
+  @media screen and (min-width: 1300px) { html { font-size: 21px } }
+  @media screen and (min-width: 1800px) { html { font-size: 23px } }
+  font-family: $font-sans; 
+  line-height: 1.7;
+}
+
+
+body {
+  font-size: inherit;  
+  max-width: $global-width;
+  margin: 0 auto;  
+  background: white;
+  color: $color-text;
+}
+
+body, table, form, select, option, input, textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  line-height: 1.2;
+  font-family: $font-heading;
+  margin-bottom: 0.5em;
+  font-weight: normal;
+  padding: 0;
+}
+
+h1 { font-size: 2.6em; }
+h2 { font-size: 2.0em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
+
+
+textarea,
+input,
+a,
+select {
+  outline: none;
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+  }
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
