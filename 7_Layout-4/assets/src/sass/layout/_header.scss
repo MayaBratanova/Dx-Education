@@ -1,0 +1,19 @@
+.site-header {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 0;
+
+    .site-logo {
+        font-weight: 600;
+    }
+
+    .site-adv {
+        color: #7e7979;
+        font-size: 14px;
+    }
+
+    .site-adv span {
+        color: #000;
+    }
+}

@@ -1,0 +1,33 @@
+.site-search-form {
+
+    display: flex;
+    align-items: center;
+    
+    input {
+        border: none;
+        background: transparent;        
+    }
+
+    input::placeholder {
+        color: #000;
+        font-size: 14px;
+    }
+}
+
+.icon {
+    @extend %fa-icon;
+    @extend .fas;   
+
+    &-search:before {
+        content: fa-content($fa-var-search);
+        font-weight: 400;
+        padding-right: 0.5em;
+    }    
+}
+
+
+button {
+    background: transparent;
+    border: none;
+}
+

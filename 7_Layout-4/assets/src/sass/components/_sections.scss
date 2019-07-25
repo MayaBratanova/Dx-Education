@@ -1,0 +1,59 @@
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.site-search {
+    background: #FFEB3D;   
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        padding: 1.7em 0;
+    }
+    
+    .site-search-description {
+        font-weight: 900;
+        padding-right: 2em;
+    }
+}
+
+.site-content {
+
+    &-description {
+        width: 38em;
+        padding: 3.5em 0;
+
+        span {
+            font-weight: 900;
+        }
+    }
+}
+
+.dx-grossary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &-title {
+        font-size: 24px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        display: inline-block;
+        padding: 0.5em;
+        line-height: 1;
+        width: 2em;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    &-section {
+        flex: 0 0 26%;
+        padding-bottom: 3em;
+    }
+
+    &-list {
+        line-height: 2.2;
+    }
+    
+}
