@@ -5,13 +5,16 @@
 
     .page-wrapper {
         display: flex;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;   
+        justify-content: center;    
     }
 
     &-heading-container {
         background: #000;
         color: #fff;
-        padding: 0 1em;
+        padding: 1em 1em 2em 1em;
+        flex: 0 0 728px;
+        max-width: 100%;
     }
 
     &-title {
@@ -28,7 +31,7 @@
 
     &-content {
         padding: 0;
-        margin-top: -40px;
+        margin-top: -70px;
 
     }
 

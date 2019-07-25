@@ -1,5 +1,5 @@
 body {
-  font-family: "Droid Sans"; }
+  font-family: "Droid Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif; }
 
 * {
   word-wrap: break-word; }
@@ -173,7 +173,7 @@ html {
 
 html {
   font-size: 18px;
-  font-family: "Droid Sans";
+  font-family: "Droid Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
   line-height: 1.7; }
   @media screen and (min-width: 500px) {
     html html {
@@ -213,7 +213,7 @@ h5,
 h6 {
   font-size: 1em;
   line-height: 1.2;
-  font-family: "Droid Sans";
+  font-family: "Droid Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif;
   margin-bottom: 0.5em;
   font-weight: normal;
   padding: 0; }
@@ -5238,47 +5238,33 @@ readers do not read off random characters that represent icons */
   position: relative;
   -webkit-align-items: center;
           align-items: center;
-  font-weight: 700; }
+  font-weight: bold; }
   .button-big:hover {
     background: rgba(207, 20, 20, 0.8); }
   .button-big span {
     display: inline-block; }
 
 .page-wrapper {
-  max-width: 1250px;
-  width: 100%;
+  max-width: 1260px;
   margin: 0 auto;
-  font-family: "Droid Sans"; }
+  font-family: "Droid Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif; }
 
 .site-banner {
   box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.75);
-  background: #000;
-  overflow: hidden; }
+  background: #000; }
   .site-banner .page-wrapper {
     display: -webkit-flex;
     display: flex;
-    background: #000; }
-  .site-banner .column-width-160 {
-    background: #000; }
-  .site-banner .column-width-728 {
+    -webkit-justify-content: center;
+            justify-content: center; }
+    .site-banner .page-wrapper:before {
+      content: '';
+      display: table; }
+    .site-banner .page-wrapper .entry-aside:after {
+      content: '';
+      display: table; }
+  .site-banner .column-width-large {
     margin: 0; }
-  .site-banner .column-width-300 {
-    margin: 0;
-    background: url("../../src/images/thomas-william-FD03zUvwznY-unsplash.jpg") no-repeat center center;
-    object-fit: cover;
-    -webkit-flex: 0 0 100%;
-            flex: 0 0 100%;
-    position: relative;
-    overflow: hidden; }
-  .site-banner .column-width-300:after {
-    position: absolute;
-    display: block;
-    content: '';
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(90deg, black, #fcfcfc63); }
 
 .site-logo img {
   width: 70px;
@@ -5293,6 +5279,10 @@ readers do not read off random characters that represent icons */
 .icon-chevron-circle-right:before {
   content: "\f138"; }
 
+.fa-bars {
+  font-weight: 500;
+  display: none; }
+
 .svg-arrow {
   width: 85px;
   background: #fff;
@@ -5301,26 +5291,55 @@ readers do not read off random characters that represent icons */
   position: absolute;
   left: 14px; }
 
-.column-width-160 {
+.column-width-small {
   -webkit-flex: 0 0 160px;
           flex: 0 0 160px;
   margin: 0 0.8em; }
 
-.column-width-728 {
-  -webkit-flex: 0 0 728px;
-          flex: 0 0 728px; }
-
-.column-width-300 {
+.column-width-medium {
   -webkit-flex: 0 0 300px;
           flex: 0 0 300px;
   margin: 0 0.8em; }
 
-@media (max-width: 1250px) {
+.column-width-large {
+  -webkit-flex: 0 0 728px;
+          flex: 0 0 728px;
+  max-width: 100%; }
+
+@media (max-width: 1350px) {
   .page-wrapper {
     max-width: 1200px;
     margin: 0 auto; }
-  .column-width-160 {
+  .column-width-small {
+    display: none; }
+  .column-width-medium {
+    margin-right: 0; }
+  .column-width-large {
+    -webkit-flex-shrink: 1;
+            flex-shrink: 1; } }
+
+@media (max-width: 1200px) {
+  .site-wrapper {
+    padding: 0 1.5em; }
+  .page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto; }
+  .column-width-medium {
+    display: none; }
+  .adv-728-90 {
     display: none; } }
+
+@media (max-width: 800px) {
+  .site-content .entry-title {
+    font-size: 32px; }
+  .fa-bars {
+    display: block; }
+  .site-menu-list {
+    display: none; }
+  .button-big {
+    font-size: 36px; }
+    .button-big img {
+      display: none; } }
 
 .entry {
   margin-top: 2em;
@@ -5330,11 +5349,16 @@ readers do not read off random characters that represent icons */
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
-            flex-wrap: wrap; }
+            flex-wrap: wrap;
+    -webkit-justify-content: center;
+            justify-content: center; }
   .entry-heading-container {
     background: #000;
     color: #fff;
-    padding: 0 1em; }
+    padding: 1em 1em 2em 1em;
+    -webkit-flex: 0 0 728px;
+            flex: 0 0 728px;
+    max-width: 100%; }
   .entry-title {
     font-size: 36px;
     font-weight: 500;
@@ -5345,7 +5369,7 @@ readers do not read off random characters that represent icons */
     padding: 0; }
   .entry-content {
     padding: 0;
-    margin-top: -40px; }
+    margin-top: -70px; }
   .entry-description {
     padding-top: 0.7em;
     padding-bottom: 0.7em; }
