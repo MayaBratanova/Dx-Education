@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/dist/css/master.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script src="assets/src/scripts/script.js"></script>
     <title>Layout 2</title>
 </head>
 <body>
@@ -28,98 +30,130 @@
        <div class="site-content">
             <div class="wrapper">
                 <p class="site-content-description"><span>DevriX Grossary</span> is a list most of the words that we've encountered in our work so far. Of course it's not complete, so don't hesitate to request one!</p>
-                <div class="dx-grossary">
-                    <div class="dx-grossary-a dx-grossary-section">
-                        <h2 class="dx-grossary-title">A</h2>
-                        <ul class="dx-grossary-list">
-                            <li><a href="#">Ad network</a></li>
-                            <li><a href="#">Affiliate Marketing</a></li>
-                            <li><a href="#">AJAX</a></li>
-                            <li><a href="#">Apache</a></li>
-                            <li><a href="#">API</a></li>
-                            <li><a href="#">Attribution Model</a></li>
-                            <li><a href="#">Average Recurring Recenue Per Paying User (ARPPU)</a></li>
-                            <li><a href="#">Average Recurring Revenue Rer User (ARPU)</a></li>
-                            <li><a href="#">Automated Deployment</a></li>
+                <div class="container">
+                    <div class="dx-grossary">
+                        <div class="dx-grossary-a dx-grossary-section show">                        
+                            <ul class="dx-grossary-list">
+                                <li><h2 class="dx-grossary-title">A</h2></li>
+                                <li><a href="#">Ad network</a></li>
+                                <li><a href="#">Affiliate Marketing</a></li>
+                                <li><a href="#">AJAX</a></li>
+                                <li><a href="#">Apache</a></li>
+                                <li><a href="#">API</a></li>
+                                <li><a href="#">Attribution Model</a></li>
+                                <li><a href="#">Average Recurring Recenue Per Paying User (ARPPU)</a></li>
+                                <li><a href="#">Average Recurring Revenue Rer User (ARPU)</a></li>
+                                <li><a href="#">Automated Deployment</a></li>
+                            </ul>
+                        </div>
+                        <div class="dx-grossary-b dx-grossary-section show">                        
+                            <ul class="dx-grossary-list">
+                                <li><h2 class="dx-grossary-title">B</h2></li>
+                                <li><a href="#">Back-End</a></li>
+                                <li><a href="#">Backup</a></li>
+                                <li><a href="#">Big Data Analytics</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Bounce rate</a></li>
+                                <li><a href="#">Brand Awareness</a></li>
+                                <li><a href="#">Brand Identity</a></li>
+                                <li><a href="#">Breadcrumb</a></li>
+                                <li><a href="#">Breadcrumb</a></li>
+                                <li><a href="#" class="load-more">Load the rest ...</a></li>
+                            </ul>
+                        </div>
+                        <div class="dx-grossary-c dx-grossary-section show">
+                            <ul class="dx-grossary-list">
+                                <li><h2 class="dx-grossary-title">C</h2></li>
+                                <li><a href="#">Cache</a></li>
+                                <li><a href="#">Call-to-Action (CTA)</a></li>
+                                <li><a href="#">Captcha</a></li>
+                                <li><a href="#">Cloud Hosting</a></li>
+                                <li><a href="#">Code Freeze</a></li>
+                                <li><a href="#">Competitive Research</a></li>
+                                <li><a href="#">Compression</a></li>
+                                <li><a href="#">Consumer to Business (C2B)</a></li>
+                                <li><a href="#">Consumer to Consumer (C2C)</a></li>
+                                <li><a href="#" class="load-more">Load the rest ...</a></li>
+                            </ul>
+                        </div>
+                        <div class="dx-grossary-d dx-grossary-section hide">                        
+                            <ul class="dx-grossary-list">
+                                <li><h2 class="dx-grossary-title">D</h2></li>
+                                <li><a href="#">Ad network</a></li>
+                                <li><a href="#">Affiliate Marketing</a></li>
+                                <li><a href="#">AJAX</a></li>
+                                <li><a href="#">Apache</a></li>
+                                <li><a href="#">API</a></li>
+                                <li><a href="#">Attribution Model</a></li>
+                                <li><a href="#">Average Recurring Recenue Per Paying User (ARPPU)</a></li>
+                                <li><a href="#">Average Recurring Revenue Rer User (ARPU)</a></li>
+                                <li><a href="#">Automated Deployment</a></li>
+                            </ul>
+                        </div>
+                        <div class="dx-grossary-e dx-grossary-section hide">                        
+                            <ul class="dx-grossary-list">
+                                <li><h2 class="dx-grossary-title">E</h2></li>
+                                <li><a href="#">Back-End</a></li>
+                                <li><a href="#">Backup</a></li>
+                                <li><a href="#">Big Data Analytics</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Bounce rate</a></li>
+                                <li><a href="#">Brand Awareness</a></li>
+                                <li><a href="#">Brand Identity</a></li>
+                                <li><a href="#">Breadcrumb</a></li>
+                                <li><a href="#">Breadcrumb</a></li>
+                                <li><a href="#" class="load-more">Load the rest ...</a></li>
+                            </ul>
+                        </div>
+                        <div class="dx-grossary-f dx-grossary-section hide">                        
+                            <ul class="dx-grossary-list">
+                                <li><h2 class="dx-grossary-title">F</h2></li>
+                                <li><a href="#">Cache</a></li>
+                                <li><a href="#">Call-to-Action (CTA)</a></li>
+                                <li><a href="#">Captcha</a></li>
+                                <li><a href="#">Cloud Hosting</a></li>
+                                <li><a href="#">Code Freeze</a></li>
+                                <li><a href="#">Competitive Research</a></li>
+                                <li><a href="#">Compression</a></li>
+                                <li><a href="#">Consumer to Business (C2B)</a></li>
+                                <li><a href="#">Consumer to Consumer (C2C)</a></li>
+                                <li><a href="#" class="load-more">Load the rest ...</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="site-aside">
+                        <ul class="dx-grossary-alphabet">
+                            <li><a href="#">A</a></li>
+                            <li><a href="#">B</a></li>
+                            <li><a href="#">C</a></li>
+                            <li><a href="#">D</a></li>
+                            <li><a href="#">E</a></li>
+                            <li><a href="#">F</a></li>
+                            <li><a href="#">G</a></li>
+                            <li><a href="#">H</a></li>
+                            <li><a href="#">I</a></li>
+                            <li><a href="#">J</a></li>
+                            <li><a href="#">K</a></li>
+                            <li><a href="#">L</a></li>
+                            <li><a href="#">M</a></li>
+                            <li><a href="#">N</a></li>
+                            <li><a href="#">O</a></li>
+                            <li><a href="#">P</a></li>
+                            <li><a href="#">Q</a></li>
+                            <li><a href="#">R</a></li>
+                            <li><a href="#">S</a></li>
+                            <li><a href="#">T</a></li>
+                            <li><a href="#">U</a></li>
+                            <li><a href="#">V</a></li>
+                            <li><a href="#">W</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Y</a></li>
+                            <li><a href="#">Z</a></li>               
                         </ul>
                     </div>
-                    <div class="dx-grossary-b dx-grossary-section">
-                        <h2 class="dx-grossary-title">B</h2>
-                        <ul class="dx-grossary-list">
-                            <li><a href="#">Back-End</a></li>
-                            <li><a href="#">Backup</a></li>
-                            <li><a href="#">Big Data Analytics</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Bounce rate</a></li>
-                            <li><a href="#">Brand Awareness</a></li>
-                            <li><a href="#">Brand Identity</a></li>
-                            <li><a href="#">Breadcrumb</a></li>
-                            <li><a href="#">Breadcrumb</a></li>
-                            <li><a href="#">Load the rest ...</a></li>
-                        </ul>
-                    </div>
-                    <div class="dx-grossary-c dx-grossary-section">
-                        <h2 class="dx-grossary-title">C</h2>
-                        <ul class="dx-grossary-list">
-                            <li><a href="#">Cache</a></li>
-                            <li><a href="#">Call-to-Action (CTA)</a></li>
-                            <li><a href="#">Captcha</a></li>
-                            <li><a href="#">Cloud Hosting</a></li>
-                            <li><a href="#">Code Freeze</a></li>
-                            <li><a href="#">Competitive Research</a></li>
-                            <li><a href="#">Compression</a></li>
-                            <li><a href="#">Consumer to Business (C2B)</a></li>
-                            <li><a href="#">Consumer to Consumer (C2C)</a></li>
-                            <li><a href="#">Load the rest ...</a></li>
-                        </ul>
-                    </div>
-                    <div class="dx-grossary-a dx-grossary-section">
-                        <h2 class="dx-grossary-title">A</h2>
-                        <ul class="dx-grossary-list">
-                            <li><a href="#">Ad network</a></li>
-                            <li><a href="#">Affiliate Marketing</a></li>
-                            <li><a href="#">AJAX</a></li>
-                            <li><a href="#">Apache</a></li>
-                            <li><a href="#">API</a></li>
-                            <li><a href="#">Attribution Model</a></li>
-                            <li><a href="#">Average Recurring Recenue Per Paying User (ARPPU)</a></li>
-                            <li><a href="#">Average Recurring Revenue Rer User (ARPU)</a></li>
-                            <li><a href="#">Automated Deployment</a></li>
-                        </ul>
-                    </div>
-                    <div class="dx-grossary-b dx-grossary-section">
-                        <h2 class="dx-grossary-title">B</h2>
-                        <ul class="dx-grossary-list">
-                            <li><a href="#">Back-End</a></li>
-                            <li><a href="#">Backup</a></li>
-                            <li><a href="#">Big Data Analytics</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Bounce rate</a></li>
-                            <li><a href="#">Brand Awareness</a></li>
-                            <li><a href="#">Brand Identity</a></li>
-                            <li><a href="#">Breadcrumb</a></li>
-                            <li><a href="#">Breadcrumb</a></li>
-                            <li><a href="#">Load the rest ...</a></li>
-                        </ul>
-                    </div>
-                    <div class="dx-grossary-c dx-grossary-section">
-                        <h2 class="dx-grossary-title">C</h2>
-                        <ul class="dx-grossary-list">
-                            <li><a href="#">Cache</a></li>
-                            <li><a href="#">Call-to-Action (CTA)</a></li>
-                            <li><a href="#">Captcha</a></li>
-                            <li><a href="#">Cloud Hosting</a></li>
-                            <li><a href="#">Code Freeze</a></li>
-                            <li><a href="#">Competitive Research</a></li>
-                            <li><a href="#">Compression</a></li>
-                            <li><a href="#">Consumer to Business (C2B)</a></li>
-                            <li><a href="#">Consumer to Consumer (C2C)</a></li>
-                            <li><a href="#">Load the rest ...</a></li>
-                        </ul>
-                    </div>
-                </div>
+                </div>                
             </div>
-       </div>
+       </div>       
        <div class="site-footer">
            <div class="wrapper">
                 <p>The terms you will meet when you work with a WordPress development agency...</p>

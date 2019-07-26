@@ -1,11 +1,11 @@
 .site-search-form {
-
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
+
     input {
         border: none;
-        background: transparent;        
+        background: transparent;  
+        padding: 0.5em;      
     }
 
     input::placeholder {
@@ -29,5 +29,19 @@
 button {
     background: transparent;
     border: none;
+}
+
+.load-more {
+    color: rgb(105, 104, 104);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.site-aside {
+    // opacity: 0;
 }
 
