@@ -1,5 +1,5 @@
 .site-wrapper {    
-    position: relative;
+    // position: relative;
 }
 
 .wrapper {
@@ -25,40 +25,71 @@
     }
 }
 
-.site-content {
-    position: relative;
+.site-content {  
 
     &-description {
         width: 38em;
-        padding: 3.5em 0;
+        padding: 3em 0;
         opacity: 0;
 
         span {
             font-weight: 900;
         }
-    }
+    }    
 
-    .container {
+    .wrapper {
         display: flex;
         justify-content: space-between;
     }
+
+    .grossary-container {
+        flex: 0 0 90%;
+    }
 }
 
-.site-aside {   
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    font-size: 14px;
-    letter-spacing: 1.2;
+.site-aside {
+    flex: 0 0 10%;
+    text-align: center;
+
+    .dx-grossary-alphabet {  
+        margin-top: 35px;    
+        font-size: 16px;
+        line-height: 1;     
+        position: sticky;
+        top: 40px;
+        right: 0;    
+    
+        li {
+            opacity: 0; 
+        }      
+    }
+    
+    .dx-grossary-alphabet.visible {
+
+        a {
+            display: inline-block;
+            padding: 0.3em 0.4em;
+            cursor: pointer;
+            text-shadow: 1px 1px 2px #c0bcbc;            
+    
+            &:hover {
+                transform: scale(2.2);
+                background: white;
+                border: 1px solid gray;
+                border-radius: 3px;                
+            }
+        }
+    }
 }
+
+
 
 .dx-grossary {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    max-height: calc(100vh - 530px);
-    // overflow: auto;
+    justify-content: flex-start;   
     margin-bottom: 2em;
+    margin-top: 2em;
 
     &-title {
         font-size: 24px;
@@ -70,8 +101,7 @@
         width: 2em;
         height: 2em;
         text-align: center;
-        margin-bottom: 1.5em;
-        animation: wobble 1.5s ease-in 0.5s 1;
+        margin-bottom: 1em;       
     }
 
     &-section {
@@ -79,35 +109,56 @@
         margin-bottom: 3em;
         margin-right: 3.5em;
         opacity: 0;     
-        // max-height: 500px;
-        // overflow: auto;  
+        min-height: calc(100vh - 500px);      
     }
 
     &-list {
         line-height: 2.2;
-    }
-    
-}
+        
+        a {
+            padding: 0.3em;
+            cursor: pointer;
 
-.loaded .site-search {
-    animation: fadeInLeft 0.5s ease-in 0.7s forwards;
-}
-
-.loaded .site-content-description {
-    animation: pulse 0.6s ease-out 1.2s forwards;
-}
-
-.loaded .dx-grossary-section.list-delay {
-    animation: loadMenu 0.5s ease-in 1s forwards;    
-}
-
-.loaded .list-delay .dx-grossary-list li {
-    animation: loadMenu 1s 1 both;      
-    @for $i from 1 through 100 {
-        &:nth-child(#{$i}) {
-        animation-delay: $i * 0.23s;
+            &:hover {
+                transform: scale(2.2);
+            }
         }
     }
 }
 
+.loaded {
+    .site-search {
+        animation: fadeInLeft 0.6s ease-in 0.5s forwards;
+    }
 
+    .site-content-description {
+        animation: pulse 0.3s ease-out 1s forwards;
+    }
+
+    .dx-grossary-section.visible {
+        animation: loadMenu 1s 1 both;          
+        @for $i from 1 through 100 {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * 0.3s;
+            }
+        }
+    }
+
+    .visible .dx-grossary-list li {
+        animation: loadMenuHorizontal 0.5s 1 both;      
+        @for $i from 1 through 100 {
+            &:nth-child(#{$i}) {
+            animation-delay: $i * 0.2s;
+            }
+        }
+    }
+
+    .dx-grossary-alphabet.visible li {
+        animation: loadMenu 0.5s 1 both;      
+        @for $i from 1 through 100 {
+            &:nth-child(#{$i}) {
+            animation-delay: $i * 0.05s;
+            }
+        }
+    }
+}

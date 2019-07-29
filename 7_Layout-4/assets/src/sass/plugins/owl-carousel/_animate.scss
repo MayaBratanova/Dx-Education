@@ -123,7 +123,19 @@
 
 @keyframes loadMenu {
 	from {
-		transform: translateY(-100%);
+		transform: translateY(-40%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes loadMenuHorizontal {
+	from {
+		transform: translateX(-20%);
 		opacity: 0;
 	}
 

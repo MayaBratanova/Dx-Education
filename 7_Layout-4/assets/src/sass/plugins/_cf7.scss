@@ -1,0 +1,159 @@
+.fancyform {
+
+    &-salutation {
+        text-transform: uppercase;        
+        font-weight: 700;
+        color: #000;
+        font-size: 18px;
+        position: relative;
+        margin-bottom: 0;
+
+        &:before {
+            content: '';
+            background: #000;
+            width: 13px;
+            height: 2px;
+            display: inline-block;
+            position: absolute;
+            top: 16px;
+            left: 97px;
+        }
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 66px;
+    }
+
+    &-subtitle {        
+        font-size: 22px;
+        margin-top: 0;
+        font-weight: 500;       
+    }      
+}
+
+
+.page-template-fancy-form {
+
+    .columns {
+        margin: 0 auto;
+    }
+
+    .fancyform {
+
+        &-salutation {
+            text-transform: uppercase;        
+            font-weight: 700;
+            color: #000;
+            font-size: 18px;
+            position: relative;
+            margin-bottom: 0;
+    
+            &:before {
+                content: '';
+                background: #000;
+                width: 13px;
+                height: 2px;
+                display: inline-block;
+                position: absolute;
+                top: 16px;
+                left: 97px;
+            }
+        }
+    
+        &-title {
+            font-weight: 500;
+            font-size: 66px;
+        }
+    
+        &-subtitle {        
+            font-size: 22px;
+            margin-top: 0;
+            font-weight: 500;       
+        }      
+    }
+
+    .mktoForm {
+        margin-top: 6em;        
+    
+        .mktoRequiredField label.mktoLabel {
+            font-weight: 500;
+            font-family: Aeonik;
+        }
+    }
+    
+    .mktoFormCol {
+        position: relative;
+    }
+    
+    div.mktoForm-wrapper-contacts {
+
+        .mktoLabel {
+            position: absolute;
+            top: -22px;
+            left: 0px;   
+            font-size: 15px;           
+            font-family: Aeonik;
+            font-weight: 500;
+            line-height: 1.29;
+            color: #676f6f;
+            margin-bottom: .2em;
+            margin-right: 1em;
+            cursor: pointer;
+        }
+
+        .mktoForm input,
+        .mktoForm select,
+        .mktoForm textarea {
+           margin-bottom: 1.6em;
+        }
+
+        .mktoForm input:focus,
+        .mktoForm select:focus,
+        .mktoForm textarea:focus {
+            border-bottom-color: $color-primary;
+            transition: .2s ease-in;
+        }
+
+        .mktoForm select.mktoField {
+            color: silver;
+        }
+
+        .mktoForm input[type=text],
+        .mktoForm input[type=email],
+        .mktoForm input[type=number],
+        .mktoForm input[type=password],
+        .mktoForm input[type=tel],
+        .mktoForm select.mktoField {
+            background-color: #fff;
+            font-size: 20px;
+            padding: .438rem .8em;
+            line-height: 1.6;
+            font-weight: 400;
+            border-radius: 0;
+            box-shadow: none;         
+        }
+
+        .mktoAsterix {
+            top: 0;
+        }
+
+        .mktoButtonRow {
+            text-align: center;
+
+            .mktoButtonWrap.mktoRound{
+                text-align: center;
+            }
+
+            .button-primary {
+                display: inline-block;
+                font-size: 15px;
+                border-radius: 2px;
+                width: auto;
+                padding: .8rem 3.5rem;
+            }
+        }
+
+    }
+}
+
