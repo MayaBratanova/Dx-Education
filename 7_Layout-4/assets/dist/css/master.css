@@ -5391,7 +5391,9 @@ readers do not read off random characters that represent icons */
     -webkit-flex-wrap: wrap;
             flex-wrap: wrap;
     -webkit-justify-content: space-between;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -webkit-align-items: center;
+            align-items: center; }
   .site-header .site-logo {
     font-weight: 600;
     -webkit-animation: 0.5s ease-out 0s 1 fadeInLeft;
@@ -5403,6 +5405,14 @@ readers do not read off random characters that represent icons */
             animation: 0.5s ease-out 0s 1 fadeInRight; }
   .site-header .site-adv span {
     color: #000; }
+  @media only screen and (max-width: 700px) {
+    .site-header {
+      margin: 2em 0; }
+      .site-header .wrapper {
+        -webkit-flex-direction: column;
+                flex-direction: column;
+        -webkit-align-items: flex-start;
+                align-items: flex-start; } }
 
 .site-footer {
   border-top: 1px solid #ccc;
@@ -5417,9 +5427,15 @@ readers do not read off random characters that represent icons */
   width: 100%;
   background: white;
   z-index: 10; }
+  .site-footer .wrapper p {
+    margin: 0.5em 0; }
+  @media only screen and (max-width: 700px) {
+    .site-footer {
+      height: 90px;
+      font-size: 14px; } }
 
 .wrapper {
-  width: 95%;
+  width: 90%;
   margin: 0 auto; }
 
 .site-search {
@@ -5435,10 +5451,23 @@ readers do not read off random characters that represent icons */
   .site-search .site-search-description {
     font-weight: 900;
     padding-right: 2em; }
+  @media only screen and (max-width: 700px) {
+    .site-search .wrapper {
+      -webkit-flex-direction: column;
+              flex-direction: column;
+      -webkit-align-items: flex-start;
+              align-items: flex-start;
+      padding: 1em 0; }
+    .site-search .site-search-description {
+      -webkit-flex: 0 0 60%;
+              flex: 0 0 60%; }
+    .site-search .site-search-form {
+      -webkit-flex: 0 0 40%;
+              flex: 0 0 40%; } }
 
 .site-content-description {
-  width: 38em;
-  padding: 3em 0;
+  max-width: 38em;
+  padding: 3em 1.5em 3em 0;
   opacity: 0; }
   .site-content-description span {
     font-weight: 900; }
@@ -5453,18 +5482,22 @@ readers do not read off random characters that represent icons */
   -webkit-flex: 0 0 90%;
           flex: 0 0 90%; }
 
+@media only screen and (max-width: 700px) {
+  .site-content .site-content-description {
+    padding: 2em 1em 2em 0; } }
+
 .site-aside {
   -webkit-flex: 0 0 10%;
           flex: 0 0 10%;
-  text-align: center; }
+  text-align: right; }
   .site-aside .dx-grossary-alphabet {
-    margin-top: 35px;
+    margin-top: 48px;
     font-size: 16px;
     line-height: 1;
     position: -webkit-sticky;
     position: sticky;
     top: 40px;
-    right: 0; }
+    left: 0; }
     .site-aside .dx-grossary-alphabet li {
       opacity: 0; }
   .site-aside .dx-grossary-alphabet.visible a {
@@ -5478,6 +5511,16 @@ readers do not read off random characters that represent icons */
       background: white;
       border: 1px solid gray;
       border-radius: 3px; }
+  @media only screen and (max-width: 500px) {
+    .site-aside .dx-grossary-alphabet {
+      font-size: 14px;
+      top: 20px;
+      line-height: 0.8; } }
+  @media only screen and (max-width: 350px) {
+    .site-aside .dx-grossary-alphabet {
+      font-size: 14px;
+      top: 10px;
+      line-height: 0.7; } }
 
 .dx-grossary {
   display: -webkit-flex;
@@ -5510,322 +5553,337 @@ readers do not read off random characters that represent icons */
     line-height: 2.2; }
     .dx-grossary-list a {
       padding: 0.3em;
-      cursor: pointer; }
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 200px;
+      display: block;
+      overflow: hidden; }
       .dx-grossary-list a:hover {
-        -webkit-transform: scale(2.2);
-                transform: scale(2.2); }
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
+  @media only screen and (max-width: 920px) {
+    .dx-grossary .dx-grossary-section {
+      -webkit-flex-basis: 40%;
+              flex-basis: 40%; } }
+  @media only screen and (max-width: 700px) {
+    .dx-grossary .wrapper {
+      width: 82%; }
+    .dx-grossary .dx-grossary-section {
+      -webkit-flex-basis: 95%;
+              flex-basis: 95%; } }
 
 .loaded .site-search {
   -webkit-animation: fadeInLeft 0.6s ease-in 0.5s forwards;
           animation: fadeInLeft 0.6s ease-in 0.5s forwards; }
 
 .loaded .site-content-description {
-  -webkit-animation: pulse 0.3s ease-out 1s forwards;
-          animation: pulse 0.3s ease-out 1s forwards; }
+  -webkit-animation: pulse 0.3s ease-out 1.2s forwards;
+          animation: pulse 0.3s ease-out 1.2s forwards; }
 
 .loaded .dx-grossary-section.visible {
-  -webkit-animation: loadMenu 1s 1 both;
-          animation: loadMenu 1s 1 both; }
+  -webkit-animation: loadMenu 1.5s 1 both;
+          animation: loadMenu 1.5s 1 both; }
   .loaded .dx-grossary-section.visible:nth-child(1) {
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s; }
+    -webkit-animation-delay: calc( 0.1s + 0.9s);
+            animation-delay: calc( 0.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(2) {
-    -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s; }
+    -webkit-animation-delay: calc( 0.2s + 0.9s);
+            animation-delay: calc( 0.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(3) {
-    -webkit-animation-delay: 0.9s;
-            animation-delay: 0.9s; }
+    -webkit-animation-delay: calc( 0.3s + 0.9s);
+            animation-delay: calc( 0.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(4) {
-    -webkit-animation-delay: 1.2s;
-            animation-delay: 1.2s; }
+    -webkit-animation-delay: calc( 0.4s + 0.9s);
+            animation-delay: calc( 0.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(5) {
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s; }
+    -webkit-animation-delay: calc( 0.5s + 0.9s);
+            animation-delay: calc( 0.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(6) {
-    -webkit-animation-delay: 1.8s;
-            animation-delay: 1.8s; }
+    -webkit-animation-delay: calc( 0.6s + 0.9s);
+            animation-delay: calc( 0.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(7) {
-    -webkit-animation-delay: 2.1s;
-            animation-delay: 2.1s; }
+    -webkit-animation-delay: calc( 0.7s + 0.9s);
+            animation-delay: calc( 0.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(8) {
-    -webkit-animation-delay: 2.4s;
-            animation-delay: 2.4s; }
+    -webkit-animation-delay: calc( 0.8s + 0.9s);
+            animation-delay: calc( 0.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(9) {
-    -webkit-animation-delay: 2.7s;
-            animation-delay: 2.7s; }
+    -webkit-animation-delay: calc( 0.9s + 0.9s);
+            animation-delay: calc( 0.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(10) {
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s; }
+    -webkit-animation-delay: calc( 1s + 0.9s);
+            animation-delay: calc( 1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(11) {
-    -webkit-animation-delay: 3.3s;
-            animation-delay: 3.3s; }
+    -webkit-animation-delay: calc( 1.1s + 0.9s);
+            animation-delay: calc( 1.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(12) {
-    -webkit-animation-delay: 3.6s;
-            animation-delay: 3.6s; }
+    -webkit-animation-delay: calc( 1.2s + 0.9s);
+            animation-delay: calc( 1.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(13) {
-    -webkit-animation-delay: 3.9s;
-            animation-delay: 3.9s; }
+    -webkit-animation-delay: calc( 1.3s + 0.9s);
+            animation-delay: calc( 1.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(14) {
-    -webkit-animation-delay: 4.2s;
-            animation-delay: 4.2s; }
+    -webkit-animation-delay: calc( 1.4s + 0.9s);
+            animation-delay: calc( 1.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(15) {
-    -webkit-animation-delay: 4.5s;
-            animation-delay: 4.5s; }
+    -webkit-animation-delay: calc( 1.5s + 0.9s);
+            animation-delay: calc( 1.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(16) {
-    -webkit-animation-delay: 4.8s;
-            animation-delay: 4.8s; }
+    -webkit-animation-delay: calc( 1.6s + 0.9s);
+            animation-delay: calc( 1.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(17) {
-    -webkit-animation-delay: 5.1s;
-            animation-delay: 5.1s; }
+    -webkit-animation-delay: calc( 1.7s + 0.9s);
+            animation-delay: calc( 1.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(18) {
-    -webkit-animation-delay: 5.4s;
-            animation-delay: 5.4s; }
+    -webkit-animation-delay: calc( 1.8s + 0.9s);
+            animation-delay: calc( 1.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(19) {
-    -webkit-animation-delay: 5.7s;
-            animation-delay: 5.7s; }
+    -webkit-animation-delay: calc( 1.9s + 0.9s);
+            animation-delay: calc( 1.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(20) {
-    -webkit-animation-delay: 6s;
-            animation-delay: 6s; }
+    -webkit-animation-delay: calc( 2s + 0.9s);
+            animation-delay: calc( 2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(21) {
-    -webkit-animation-delay: 6.3s;
-            animation-delay: 6.3s; }
+    -webkit-animation-delay: calc( 2.1s + 0.9s);
+            animation-delay: calc( 2.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(22) {
-    -webkit-animation-delay: 6.6s;
-            animation-delay: 6.6s; }
+    -webkit-animation-delay: calc( 2.2s + 0.9s);
+            animation-delay: calc( 2.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(23) {
-    -webkit-animation-delay: 6.9s;
-            animation-delay: 6.9s; }
+    -webkit-animation-delay: calc( 2.3s + 0.9s);
+            animation-delay: calc( 2.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(24) {
-    -webkit-animation-delay: 7.2s;
-            animation-delay: 7.2s; }
+    -webkit-animation-delay: calc( 2.4s + 0.9s);
+            animation-delay: calc( 2.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(25) {
-    -webkit-animation-delay: 7.5s;
-            animation-delay: 7.5s; }
+    -webkit-animation-delay: calc( 2.5s + 0.9s);
+            animation-delay: calc( 2.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(26) {
-    -webkit-animation-delay: 7.8s;
-            animation-delay: 7.8s; }
+    -webkit-animation-delay: calc( 2.6s + 0.9s);
+            animation-delay: calc( 2.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(27) {
-    -webkit-animation-delay: 8.1s;
-            animation-delay: 8.1s; }
+    -webkit-animation-delay: calc( 2.7s + 0.9s);
+            animation-delay: calc( 2.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(28) {
-    -webkit-animation-delay: 8.4s;
-            animation-delay: 8.4s; }
+    -webkit-animation-delay: calc( 2.8s + 0.9s);
+            animation-delay: calc( 2.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(29) {
-    -webkit-animation-delay: 8.7s;
-            animation-delay: 8.7s; }
+    -webkit-animation-delay: calc( 2.9s + 0.9s);
+            animation-delay: calc( 2.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(30) {
-    -webkit-animation-delay: 9s;
-            animation-delay: 9s; }
+    -webkit-animation-delay: calc( 3s + 0.9s);
+            animation-delay: calc( 3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(31) {
-    -webkit-animation-delay: 9.3s;
-            animation-delay: 9.3s; }
+    -webkit-animation-delay: calc( 3.1s + 0.9s);
+            animation-delay: calc( 3.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(32) {
-    -webkit-animation-delay: 9.6s;
-            animation-delay: 9.6s; }
+    -webkit-animation-delay: calc( 3.2s + 0.9s);
+            animation-delay: calc( 3.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(33) {
-    -webkit-animation-delay: 9.9s;
-            animation-delay: 9.9s; }
+    -webkit-animation-delay: calc( 3.3s + 0.9s);
+            animation-delay: calc( 3.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(34) {
-    -webkit-animation-delay: 10.2s;
-            animation-delay: 10.2s; }
+    -webkit-animation-delay: calc( 3.4s + 0.9s);
+            animation-delay: calc( 3.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(35) {
-    -webkit-animation-delay: 10.5s;
-            animation-delay: 10.5s; }
+    -webkit-animation-delay: calc( 3.5s + 0.9s);
+            animation-delay: calc( 3.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(36) {
-    -webkit-animation-delay: 10.8s;
-            animation-delay: 10.8s; }
+    -webkit-animation-delay: calc( 3.6s + 0.9s);
+            animation-delay: calc( 3.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(37) {
-    -webkit-animation-delay: 11.1s;
-            animation-delay: 11.1s; }
+    -webkit-animation-delay: calc( 3.7s + 0.9s);
+            animation-delay: calc( 3.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(38) {
-    -webkit-animation-delay: 11.4s;
-            animation-delay: 11.4s; }
+    -webkit-animation-delay: calc( 3.8s + 0.9s);
+            animation-delay: calc( 3.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(39) {
-    -webkit-animation-delay: 11.7s;
-            animation-delay: 11.7s; }
+    -webkit-animation-delay: calc( 3.9s + 0.9s);
+            animation-delay: calc( 3.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(40) {
-    -webkit-animation-delay: 12s;
-            animation-delay: 12s; }
+    -webkit-animation-delay: calc( 4s + 0.9s);
+            animation-delay: calc( 4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(41) {
-    -webkit-animation-delay: 12.3s;
-            animation-delay: 12.3s; }
+    -webkit-animation-delay: calc( 4.1s + 0.9s);
+            animation-delay: calc( 4.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(42) {
-    -webkit-animation-delay: 12.6s;
-            animation-delay: 12.6s; }
+    -webkit-animation-delay: calc( 4.2s + 0.9s);
+            animation-delay: calc( 4.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(43) {
-    -webkit-animation-delay: 12.9s;
-            animation-delay: 12.9s; }
+    -webkit-animation-delay: calc( 4.3s + 0.9s);
+            animation-delay: calc( 4.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(44) {
-    -webkit-animation-delay: 13.2s;
-            animation-delay: 13.2s; }
+    -webkit-animation-delay: calc( 4.4s + 0.9s);
+            animation-delay: calc( 4.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(45) {
-    -webkit-animation-delay: 13.5s;
-            animation-delay: 13.5s; }
+    -webkit-animation-delay: calc( 4.5s + 0.9s);
+            animation-delay: calc( 4.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(46) {
-    -webkit-animation-delay: 13.8s;
-            animation-delay: 13.8s; }
+    -webkit-animation-delay: calc( 4.6s + 0.9s);
+            animation-delay: calc( 4.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(47) {
-    -webkit-animation-delay: 14.1s;
-            animation-delay: 14.1s; }
+    -webkit-animation-delay: calc( 4.7s + 0.9s);
+            animation-delay: calc( 4.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(48) {
-    -webkit-animation-delay: 14.4s;
-            animation-delay: 14.4s; }
+    -webkit-animation-delay: calc( 4.8s + 0.9s);
+            animation-delay: calc( 4.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(49) {
-    -webkit-animation-delay: 14.7s;
-            animation-delay: 14.7s; }
+    -webkit-animation-delay: calc( 4.9s + 0.9s);
+            animation-delay: calc( 4.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(50) {
-    -webkit-animation-delay: 15s;
-            animation-delay: 15s; }
+    -webkit-animation-delay: calc( 5s + 0.9s);
+            animation-delay: calc( 5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(51) {
-    -webkit-animation-delay: 15.3s;
-            animation-delay: 15.3s; }
+    -webkit-animation-delay: calc( 5.1s + 0.9s);
+            animation-delay: calc( 5.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(52) {
-    -webkit-animation-delay: 15.6s;
-            animation-delay: 15.6s; }
+    -webkit-animation-delay: calc( 5.2s + 0.9s);
+            animation-delay: calc( 5.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(53) {
-    -webkit-animation-delay: 15.9s;
-            animation-delay: 15.9s; }
+    -webkit-animation-delay: calc( 5.3s + 0.9s);
+            animation-delay: calc( 5.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(54) {
-    -webkit-animation-delay: 16.2s;
-            animation-delay: 16.2s; }
+    -webkit-animation-delay: calc( 5.4s + 0.9s);
+            animation-delay: calc( 5.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(55) {
-    -webkit-animation-delay: 16.5s;
-            animation-delay: 16.5s; }
+    -webkit-animation-delay: calc( 5.5s + 0.9s);
+            animation-delay: calc( 5.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(56) {
-    -webkit-animation-delay: 16.8s;
-            animation-delay: 16.8s; }
+    -webkit-animation-delay: calc( 5.6s + 0.9s);
+            animation-delay: calc( 5.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(57) {
-    -webkit-animation-delay: 17.1s;
-            animation-delay: 17.1s; }
+    -webkit-animation-delay: calc( 5.7s + 0.9s);
+            animation-delay: calc( 5.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(58) {
-    -webkit-animation-delay: 17.4s;
-            animation-delay: 17.4s; }
+    -webkit-animation-delay: calc( 5.8s + 0.9s);
+            animation-delay: calc( 5.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(59) {
-    -webkit-animation-delay: 17.7s;
-            animation-delay: 17.7s; }
+    -webkit-animation-delay: calc( 5.9s + 0.9s);
+            animation-delay: calc( 5.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(60) {
-    -webkit-animation-delay: 18s;
-            animation-delay: 18s; }
+    -webkit-animation-delay: calc( 6s + 0.9s);
+            animation-delay: calc( 6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(61) {
-    -webkit-animation-delay: 18.3s;
-            animation-delay: 18.3s; }
+    -webkit-animation-delay: calc( 6.1s + 0.9s);
+            animation-delay: calc( 6.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(62) {
-    -webkit-animation-delay: 18.6s;
-            animation-delay: 18.6s; }
+    -webkit-animation-delay: calc( 6.2s + 0.9s);
+            animation-delay: calc( 6.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(63) {
-    -webkit-animation-delay: 18.9s;
-            animation-delay: 18.9s; }
+    -webkit-animation-delay: calc( 6.3s + 0.9s);
+            animation-delay: calc( 6.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(64) {
-    -webkit-animation-delay: 19.2s;
-            animation-delay: 19.2s; }
+    -webkit-animation-delay: calc( 6.4s + 0.9s);
+            animation-delay: calc( 6.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(65) {
-    -webkit-animation-delay: 19.5s;
-            animation-delay: 19.5s; }
+    -webkit-animation-delay: calc( 6.5s + 0.9s);
+            animation-delay: calc( 6.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(66) {
-    -webkit-animation-delay: 19.8s;
-            animation-delay: 19.8s; }
+    -webkit-animation-delay: calc( 6.6s + 0.9s);
+            animation-delay: calc( 6.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(67) {
-    -webkit-animation-delay: 20.1s;
-            animation-delay: 20.1s; }
+    -webkit-animation-delay: calc( 6.7s + 0.9s);
+            animation-delay: calc( 6.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(68) {
-    -webkit-animation-delay: 20.4s;
-            animation-delay: 20.4s; }
+    -webkit-animation-delay: calc( 6.8s + 0.9s);
+            animation-delay: calc( 6.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(69) {
-    -webkit-animation-delay: 20.7s;
-            animation-delay: 20.7s; }
+    -webkit-animation-delay: calc( 6.9s + 0.9s);
+            animation-delay: calc( 6.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(70) {
-    -webkit-animation-delay: 21s;
-            animation-delay: 21s; }
+    -webkit-animation-delay: calc( 7s + 0.9s);
+            animation-delay: calc( 7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(71) {
-    -webkit-animation-delay: 21.3s;
-            animation-delay: 21.3s; }
+    -webkit-animation-delay: calc( 7.1s + 0.9s);
+            animation-delay: calc( 7.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(72) {
-    -webkit-animation-delay: 21.6s;
-            animation-delay: 21.6s; }
+    -webkit-animation-delay: calc( 7.2s + 0.9s);
+            animation-delay: calc( 7.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(73) {
-    -webkit-animation-delay: 21.9s;
-            animation-delay: 21.9s; }
+    -webkit-animation-delay: calc( 7.3s + 0.9s);
+            animation-delay: calc( 7.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(74) {
-    -webkit-animation-delay: 22.2s;
-            animation-delay: 22.2s; }
+    -webkit-animation-delay: calc( 7.4s + 0.9s);
+            animation-delay: calc( 7.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(75) {
-    -webkit-animation-delay: 22.5s;
-            animation-delay: 22.5s; }
+    -webkit-animation-delay: calc( 7.5s + 0.9s);
+            animation-delay: calc( 7.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(76) {
-    -webkit-animation-delay: 22.8s;
-            animation-delay: 22.8s; }
+    -webkit-animation-delay: calc( 7.6s + 0.9s);
+            animation-delay: calc( 7.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(77) {
-    -webkit-animation-delay: 23.1s;
-            animation-delay: 23.1s; }
+    -webkit-animation-delay: calc( 7.7s + 0.9s);
+            animation-delay: calc( 7.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(78) {
-    -webkit-animation-delay: 23.4s;
-            animation-delay: 23.4s; }
+    -webkit-animation-delay: calc( 7.8s + 0.9s);
+            animation-delay: calc( 7.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(79) {
-    -webkit-animation-delay: 23.7s;
-            animation-delay: 23.7s; }
+    -webkit-animation-delay: calc( 7.9s + 0.9s);
+            animation-delay: calc( 7.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(80) {
-    -webkit-animation-delay: 24s;
-            animation-delay: 24s; }
+    -webkit-animation-delay: calc( 8s + 0.9s);
+            animation-delay: calc( 8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(81) {
-    -webkit-animation-delay: 24.3s;
-            animation-delay: 24.3s; }
+    -webkit-animation-delay: calc( 8.1s + 0.9s);
+            animation-delay: calc( 8.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(82) {
-    -webkit-animation-delay: 24.6s;
-            animation-delay: 24.6s; }
+    -webkit-animation-delay: calc( 8.2s + 0.9s);
+            animation-delay: calc( 8.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(83) {
-    -webkit-animation-delay: 24.9s;
-            animation-delay: 24.9s; }
+    -webkit-animation-delay: calc( 8.3s + 0.9s);
+            animation-delay: calc( 8.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(84) {
-    -webkit-animation-delay: 25.2s;
-            animation-delay: 25.2s; }
+    -webkit-animation-delay: calc( 8.4s + 0.9s);
+            animation-delay: calc( 8.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(85) {
-    -webkit-animation-delay: 25.5s;
-            animation-delay: 25.5s; }
+    -webkit-animation-delay: calc( 8.5s + 0.9s);
+            animation-delay: calc( 8.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(86) {
-    -webkit-animation-delay: 25.8s;
-            animation-delay: 25.8s; }
+    -webkit-animation-delay: calc( 8.6s + 0.9s);
+            animation-delay: calc( 8.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(87) {
-    -webkit-animation-delay: 26.1s;
-            animation-delay: 26.1s; }
+    -webkit-animation-delay: calc( 8.7s + 0.9s);
+            animation-delay: calc( 8.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(88) {
-    -webkit-animation-delay: 26.4s;
-            animation-delay: 26.4s; }
+    -webkit-animation-delay: calc( 8.8s + 0.9s);
+            animation-delay: calc( 8.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(89) {
-    -webkit-animation-delay: 26.7s;
-            animation-delay: 26.7s; }
+    -webkit-animation-delay: calc( 8.9s + 0.9s);
+            animation-delay: calc( 8.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(90) {
-    -webkit-animation-delay: 27s;
-            animation-delay: 27s; }
+    -webkit-animation-delay: calc( 9s + 0.9s);
+            animation-delay: calc( 9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(91) {
-    -webkit-animation-delay: 27.3s;
-            animation-delay: 27.3s; }
+    -webkit-animation-delay: calc( 9.1s + 0.9s);
+            animation-delay: calc( 9.1s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(92) {
-    -webkit-animation-delay: 27.6s;
-            animation-delay: 27.6s; }
+    -webkit-animation-delay: calc( 9.2s + 0.9s);
+            animation-delay: calc( 9.2s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(93) {
-    -webkit-animation-delay: 27.9s;
-            animation-delay: 27.9s; }
+    -webkit-animation-delay: calc( 9.3s + 0.9s);
+            animation-delay: calc( 9.3s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(94) {
-    -webkit-animation-delay: 28.2s;
-            animation-delay: 28.2s; }
+    -webkit-animation-delay: calc( 9.4s + 0.9s);
+            animation-delay: calc( 9.4s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(95) {
-    -webkit-animation-delay: 28.5s;
-            animation-delay: 28.5s; }
+    -webkit-animation-delay: calc( 9.5s + 0.9s);
+            animation-delay: calc( 9.5s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(96) {
-    -webkit-animation-delay: 28.8s;
-            animation-delay: 28.8s; }
+    -webkit-animation-delay: calc( 9.6s + 0.9s);
+            animation-delay: calc( 9.6s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(97) {
-    -webkit-animation-delay: 29.1s;
-            animation-delay: 29.1s; }
+    -webkit-animation-delay: calc( 9.7s + 0.9s);
+            animation-delay: calc( 9.7s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(98) {
-    -webkit-animation-delay: 29.4s;
-            animation-delay: 29.4s; }
+    -webkit-animation-delay: calc( 9.8s + 0.9s);
+            animation-delay: calc( 9.8s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(99) {
-    -webkit-animation-delay: 29.7s;
-            animation-delay: 29.7s; }
+    -webkit-animation-delay: calc( 9.9s + 0.9s);
+            animation-delay: calc( 9.9s + 0.9s); }
   .loaded .dx-grossary-section.visible:nth-child(100) {
-    -webkit-animation-delay: 30s;
-            animation-delay: 30s; }
+    -webkit-animation-delay: calc( 10s + 0.9s);
+            animation-delay: calc( 10s + 0.9s); }
 
 .loaded .visible .dx-grossary-list li {
   -webkit-animation: loadMenuHorizontal 0.5s 1 both;
