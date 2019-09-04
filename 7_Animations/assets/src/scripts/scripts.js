@@ -51,3 +51,7 @@ jQuery( document ).ready( function() {
     })
 });
 
+$(document).ready( function() {    
+    $(".grossary-alphabet").sticky({topSpacing:0});
+});
+

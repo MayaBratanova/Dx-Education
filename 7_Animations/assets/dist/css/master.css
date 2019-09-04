@@ -5512,8 +5512,7 @@ readers do not read off random characters that represent icons */
             flex: 0 0 calc(100%/10*2.5);
     margin-bottom: 3em;
     margin-right: 3.5em;
-    opacity: 0;
-    min-height: calc(100vh - 500px); }
+    opacity: 0; }
   .grossary-list {
     line-height: 2.2; }
     .grossary-list a {
@@ -6495,10 +6494,7 @@ button {
 .grossary-alphabet {
   margin-top: 3em;
   line-height: 1;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 40px;
-  left: 0; }
+  text-align: center; }
   .grossary-alphabet li {
     opacity: 0; }
   .grossary-alphabet.is-visible a {
@@ -6515,12 +6511,10 @@ button {
   @media only screen and (max-width: 640px) {
     .grossary-alphabet {
       font-size: 0.9em;
-      top: 20px;
       line-height: 0.8;
       margin-top: 2.3em; } }
   @media only screen and (max-width: 480px) {
     .grossary-alphabet {
-      top: 10px;
       line-height: 0.7; } }
 
 /*# sourceMappingURL=master.css.map */

@@ -39,10 +39,9 @@ button {
 
 .grossary-alphabet {  
     margin-top: 3em;    
-    line-height: 1;     
-    position: sticky;          
-    top: 40px;
-    left: 0;
+    line-height: 1;
+    text-align: center;     
+    
 
     li {
         opacity: 0; 
@@ -67,13 +66,11 @@ button {
 
     @media only screen and (max-width: $breakpoint-small) {
         font-size: 0.9em;
-        top: 20px;
         line-height: 0.8;
         margin-top: 2.3em;
     }
     
-    @media only screen and (max-width: $breakpoint-mobile) {
-        top: 10px;
+    @media only screen and (max-width: $breakpoint-mobile) {        
         line-height: 0.7;
     }
 }
