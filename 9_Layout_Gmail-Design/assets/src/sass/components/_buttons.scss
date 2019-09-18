@@ -1,0 +1,27 @@
+.button {
+    outline: none;
+    border: none;
+}
+
+.button-compose {
+    width: 100%;
+    background: $color-primary;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.7em 1.7em 0.7em 1.5em;
+    margin-bottom: 2em;   
+    font-weight: 900;
+    text-align: right;
+
+    &:before {
+        display: inline-block;
+        content: '';
+        background-image: url('../images/add.svg');
+        background-size: 20px 15px;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+}
