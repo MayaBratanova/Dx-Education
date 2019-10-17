@@ -1,0 +1,17 @@
+@media (max-width: $breakpoint-medium) {
+    .section-attachment {
+        display: none;
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .received-email-section {
+        display: none;
+    }
+}
+
+// @media (max-width: 820px) {
+//     .email {
+//         display: none;
+//     }
+// }

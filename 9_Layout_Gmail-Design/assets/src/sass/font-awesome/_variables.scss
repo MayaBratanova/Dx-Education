@@ -8,6 +8,7 @@ $fa-version:                  "5.0.0" !default;
 $fa-border-color:             #eee !default;
 $fa-inverse:                  #fff !default;
 $fa-li-width:                 2em !default;
+$border-default: 1px solid $color-secondary;
 
 // Convenience function used to set content property
 @function fa-content($fa-var) {

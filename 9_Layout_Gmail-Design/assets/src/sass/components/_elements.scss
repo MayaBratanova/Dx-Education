@@ -1,191 +1,391 @@
 .site-logo {
-    width: 100px;
-    height: 40px;
-    background: url('../images/gmail-logo.png') no-repeat center center;
-    background-size: contain;    
+	width: 100px;
+	height: 40px;
+	background: url('../images/gmail-logo.png') no-repeat center center;
+	background-size: contain;
 }
 
 .site-actions {
-    display: flex;
-    align-items: center;
-    margin-left: auto; 
+	display: flex;
+	align-items: center;
+	margin-left: auto;
 }
 
-.profile-controls {
-    display: inline-block;
+.controls {
+	display: flex;
+	align-items: center;
+
+	.item-icon {
+		padding-right: 1em;
+	}
 }
 
 .item-icon {
 
-    & > img {
-        width: 17px;
-        height: auto;
-        vertical-align: middle;
-    }
+	& > img {
+		width: 17px;
+		height: auto;
+		vertical-align: middle;
+	}
 }
 
 .item-label {
-    color: #3F59EE;
-    background: rgba(#3F59EE, 0.3);
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    text-align: center;
-    margin-left: auto;
+	color: #3F59EE;
+	background: rgba(#3F59EE, 0.3);
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	text-align: center;
+	margin-left: auto;
 }
 
 .text-bold {
-    font-weight: 900;
+	font-weight: 900;
 }
 
 .avatar {
-    img {
-        border-radius: 50%;
-        vertical-align: middle;
-    }
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	display: inline-block;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
 }
 
 .options-header {
-    display: flex;
-    margin: 1em 0;
+	display: flex;
+	margin: 1em 0;
 
-    .options-title {        
-        text-transform: uppercase;
-        padding-left: 2em;        
-    }
+	.options-title {
+		text-transform: uppercase;
+		padding-left: 2em;
+	}
 
-    .item-icon {
-        margin-left: auto;
-    }
+	.item-icon {
+		margin-left: auto;
+	}
 }
 
 .site-content {
-   display: flex; 
+	display: flex;
 }
 
 .site-menu {
-    flex-basis: calc(100% / 5);
-    background: $color-secondary;
-    padding: 1em 1.5em 0 0;
-    border-bottom-left-radius: 10px;
+	flex: 0 0 250px;
+	background: $color-secondary;
+	padding: 1em 1em 0 0;
+	border-bottom-left-radius: 10px;
 
-    .options-wrapper {
-        margin-top: 1em;
-    }
+	.options-wrapper {
+		margin-top: 1em;
+	}
 
-    .options-wrapper:after {   
-        content: '';
-        display: block;   
-        width: calc(100% - 20px);
-        height: 1px;
-        background-color: rgb(221, 213, 213);
-        margin: 0 auto;    
-    }
+	.options-wrapper:after {
+		content: '';
+		display: block;
+		width: calc(100% - 20px);
+		height: 1px;
+		background-color: rgb(221, 213, 213);
+		margin-left: 1em;
+	}
 
-    .list-item {
-        margin-bottom: 1em;
-    
-        a {
-            display: flex;
-            align-items: center;
-        }
-    }
+	.list-item {
+		margin-bottom: 1em;
+
+		a {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 
 
-.email-section {
-    flex-basis: calc(100%/5);    
+.received-email-section {
+	flex: 0 0 340px;
+	background: #F9F9F9;
+
+	.section-header {
+		border-right: none;
+	}
 }
 
 .list-emails {
-    background: #F9F9F9;
 
-    .list-item.email-item {
-        min-height: 6.5em;        
-        border-top: 1px solid $color-secondary;
-        display: flex;
-        align-items: center;        
-    }
+	.list-item.email-item {
+		min-height: 6.5em;
+		border-top: 1px solid $color-secondary;
+		display: flex;
+		align-items: center;
+	}
 
-    .list-item a {
-        display: inline-block;
-        width: 100%;
-    }
+	.list-item a {
+		display: inline-block;
+		width: 100%;
+	}
 }
 
 .email-actions {
-    display: none;
-    padding: 0.5em 1em 1em 1em; 
-    
-    .list-functions {
-        display: flex;
-    
-        .list-item {
-            padding: 0 0.5em;                   
-        }       
-    }
-    
-    .email-counter {
-        margin-left: auto;       
-    }    
+	display: none;
+	padding: 0.5em 1em 1em 1em;
+
+	.list-functions {
+		display: flex;
+
+		.list-item {
+			padding: 0 0.5em;
+		}
+	}
+
+	.email-counter {
+		margin-left: auto;
+	}
 }
 
 .card-contact {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 1em;
-    padding: 1em 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 1em;
+	padding: 1em 0;
 
-    .main-info {
-        display: flex;
-        align-items: center;
-    }
+	.main-info {
+		display: flex;
+		align-items: center;
+	}
 
-    .email-title,
-    .email-name {
-        display: block;
-    }
+	.email-title,
+	.email-name {
+		display: block;
+	}
 
-    .email-name,
-    .email-date {
-        font-size: 0.9em;
-        color: $color-text-secondary;
-    }
+	.email-name,
+	.email-date {
+		font-size: 0.9em;
+		color: $color-text-secondary;
+	}
 
-    .email-title {
-        font-weight: 900;
-    }   
+	.email-title {
+		font-weight: 900;
+	}
 
-    .email-name {
-        font-weight: 500;
-        color: #cecece;
-    }
+	.email-name {
+		font-weight: 500;
+		color: #cecece;
+	}
 
-    .additional-info {
-        text-align: right;
-    
-        span {
-            display: block;
-        }
-    }
+	.email-abbreviation {
+		font-size: 18px;
+		font-weight: 900;
+	}
+
+	.additional-info {
+		text-align: right;
+
+		span {
+			display: block;
+		}
+	}
 }
 
 .section-header {
-    border: 1px solid $color-secondary;
+	border: $border-default;
+	background: $color-primary;
 }
 
 .card-information {
-    min-height: 5.5em;
+	min-height: 5.5em;
 
-    .item-icon {
-        padding-right: 0.8em;
-        padding-bottom: 0.2em;
-    }
+	.item-icon {
+		padding-right: 0.8em;
+		padding-bottom: 0.2em;
+	}
 
-    .item-icon > img {
-        width: 14px;
-    }
+	.item-icon > img {
+		width: 14px;
+	}
+}
+
+.list-card-contact {
+	display: flex;
+
+	.list-item {
+		border-right: 1px solid $color-secondary;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-grow: 1;
+	}
+
+	.card-contact {
+		.email-title,
+		.email-name {
+			font-size: 0.8em;
+		}
+	}
+
+	.card-information {
+
+		.email-title {
+			font-size: 1.1em;
+		}
+	}
+
+	.load-more {
+		flex-grow: 0;
+	}
+}
+
+.load-more {
+	width: 70px;
+	display: flex;
+	justify-content: center;
+}
+
+.email {
+	border-right: $border-default;
+	display: flex;
+	flex-direction: column;
+
+	&-data {
+		display: flex;
+		justify-content: space-between;
+		padding: 1.5em 2em;
+		color: #cecece;
+		font-weight: bold;
+	}
+
+	&-received {
+		flex-grow: 1;
+	}
+
+	.section-header {
+		border-right: none;
+
+		.card-contact {
+			padding: 0;
+		}
+	}
+
+	.list-card-contact {
+		& > .list-item:last-child {
+			border-right: none;
+		}
+	}
+
+	.card-contact {
+		padding: 1em;
+	}
+}
+
+.email-received {
+	padding: 0 4em 0 2em;
+	color: $color-text-secondary;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.email-received {
+	padding-top: 1em;
+
+	.received-title {
+		font-size: 30px;
+		font-weight: 900;
+		line-height: 1.2;
+		color: #000;
+	}
+
+	p {
+		padding-bottom: 2rem;
+	}
+}
+
+.email-answer {
+	border: $border-default;
+	border-bottom: none;
+	border-right: none;
+	font-size: 18px;
+
+	.answer-title {
+		color: #000;
+		border-bottom: $border-default;
+		padding: 0.5em 2em;
+		font-weight: 900;
+	}
+
+	.item-icon {
+		padding-right: 1.5em;
+	}
+
+	&-content {
+		padding: 1em 2em 4em 2em;
+		color: $color-text-secondary;
+		font-weight: 500;
+	}
+}
+
+.email-functions {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5em 2em;
+	border: $border-default;
+	border-right: none;	
+
+	.button-submit {
+		margin-right: 1.5em;
+	}
+}
+
+.section-attachment {
+	flex: 0 0 250px;
+	display: flex;
+	flex-direction: column;
+	border-left: $border-default;
+
+	.card-contact {
+		min-height: 5.5em;
+	}
+
+	.section-header {
+		border-left: none;
+	}
+
+	.email-files {
+		flex-grow: 1;
+	}
+}
+
+.gallery-wrapper {
+    border-bottom: $border-default;
+}
+
+.email-functions-attachment {
+	padding: 1.5em;
+	border: none;
+
+	.controls {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.item-icon {
+		flex-basis: calc(100% / 6);
+		padding-left: 1em;
+	}
+
+	.item-icon:first-of-type {
+		flex-grow: 1;
+		border-right: 1px solid #f3f2f3;
+		padding-left: 0;
+	}
 }
 
