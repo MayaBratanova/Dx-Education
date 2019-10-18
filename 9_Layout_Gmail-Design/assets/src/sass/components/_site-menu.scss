@@ -1,0 +1,28 @@
+.site-menu {
+	flex: 0 0 250px;
+	background: $color-secondary;
+	padding: 1em 1em 0 0;
+	border-bottom-left-radius: $global-layout-gutter;
+
+	.options-wrapper {
+		margin-top: 1em;
+	}
+
+	.options-wrapper:after {
+		content: '';
+		display: block;
+		width: calc(100% - 20px);
+		height: 1px;
+		background-color: rgb(221, 213, 213);
+		margin-left: 1em;
+	}
+
+	.list-item {
+		margin-bottom: 1em;
+
+		a {
+			display: flex;
+			align-items: center;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 .site-logo {
-	width: 100px;
-	height: 40px;
+	width: 6.25em;
+	height: 2.5em;
 	background: url('../images/gmail-logo.png') no-repeat center center;
 	background-size: contain;
 }
@@ -23,7 +23,7 @@
 .item-icon {
 
 	& > img {
-		width: 17px;
+		width: 1em;
 		height: auto;
 		vertical-align: middle;
 	}
@@ -33,20 +33,16 @@
 	color: #3F59EE;
 	background: rgba(#3F59EE, 0.3);
 	border-radius: 50%;
-	width: 25px;
-	height: 25px;
+	width: 1.5em;
+	height: 1.5em;
 	display: inline-block;
 	text-align: center;
 	margin-left: auto;
 }
 
-.text-bold {
-	font-weight: 900;
-}
-
 .avatar {
-	width: 45px;
-	height: 45px;
+	width: 2.8em;
+	height: 2.8em;
 	border-radius: 50%;
 	display: inline-block;
 	overflow: hidden;
@@ -79,48 +75,22 @@
 	display: flex;
 }
 
-.site-menu {
-	flex: 0 0 250px;
-	background: $color-secondary;
-	padding: 1em 1em 0 0;
-	border-bottom-left-radius: 10px;
-
-	.options-wrapper {
-		margin-top: 1em;
-	}
-
-	.options-wrapper:after {
-		content: '';
-		display: block;
-		width: calc(100% - 20px);
-		height: 1px;
-		background-color: rgb(221, 213, 213);
-		margin-left: 1em;
-	}
-
-	.list-item {
-		margin-bottom: 1em;
-
-		a {
-			display: flex;
-			align-items: center;
-		}
-	}
-}
-
-
 .received-email-section {
-	flex: 0 0 340px;
-	background: #F9F9F9;
+	flex: 0 0 21.3em;
+	background: $color-light-grey;
 
 	.section-header {
 		border-right: none;
+	}
+
+	@media (max-width: $breakpoint-small) {		
+		display: none;		
 	}
 }
 
 .list-emails {
 
-	.list-item.email-item {
+	.list-item {
 		min-height: 6.5em;
 		border-top: 1px solid $color-secondary;
 		display: flex;
@@ -179,7 +149,7 @@
 
 	.email-name {
 		font-weight: 500;
-		color: #cecece;
+		color: $color-grey;
 	}
 
 	.email-abbreviation {
@@ -245,25 +215,25 @@
 }
 
 .load-more {
-	width: 70px;
+	width: 4.4em;
 	display: flex;
 	justify-content: center;
 }
 
-.email {
+.single-email-content {
 	border-right: $border-default;
 	display: flex;
 	flex-direction: column;
 
-	&-data {
+	.email-data {
 		display: flex;
 		justify-content: space-between;
 		padding: 1.5em 2em;
-		color: #cecece;
+		color: $color-grey;
 		font-weight: bold;
 	}
 
-	&-received {
+	.email-received {
 		flex-grow: 1;
 	}
 
@@ -287,24 +257,20 @@
 }
 
 .email-received {
-	padding: 0 4em 0 2em;
+	padding: 1em 4em 0 2em;
 	color: $color-text-secondary;
 	font-weight: 500;
 	font-size: 18px;
-}
-
-.email-received {
-	padding-top: 1em;
 
 	.received-title {
 		font-size: 30px;
 		font-weight: 900;
 		line-height: 1.2;
-		color: #000;
+		color: $color-text-primary;
 	}
 
 	p {
-		padding-bottom: 2rem;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -315,7 +281,7 @@
 	font-size: 18px;
 
 	.answer-title {
-		color: #000;
+		color: $color-text-primary;
 		border-bottom: $border-default;
 		padding: 0.5em 2em;
 		font-weight: 900;
@@ -345,7 +311,7 @@
 }
 
 .section-attachment {
-	flex: 0 0 250px;
+	flex: 0 0 15.6em;
 	display: flex;
 	flex-direction: column;
 	border-left: $border-default;
@@ -360,6 +326,10 @@
 
 	.email-files {
 		flex-grow: 1;
+	}
+
+	@media (max-width: $breakpoint-medium) {		
+		display: none;		
 	}
 }
 
@@ -384,7 +354,7 @@
 
 	.item-icon:first-of-type {
 		flex-grow: 1;
-		border-right: 1px solid #f3f2f3;
+		border-right: 1px solid $border-default;
 		padding-left: 0;
 	}
 }

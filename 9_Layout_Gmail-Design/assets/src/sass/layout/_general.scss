@@ -9,6 +9,6 @@ body {
     width: 100%;
     margin: 0  auto;
     background: $color-primary;
-    border-radius: 10px;
+    border-radius: $global-layout-gutter;
 }
 
